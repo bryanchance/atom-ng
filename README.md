@@ -1,8 +1,6 @@
 # Atom
 
-[![Build status](https://dev.azure.com/github/Atom/_apis/build/status/Atom%20Production%20Branches?branchName=master)](https://dev.azure.com/github/Atom/_build/latest?definitionId=32&branchName=master)
-
-> Atom and all repositories under Atom will be archived on December 15, 2022. Learn more in our [official announcement](https://github.blog/2022-06-08-sunsetting-atom/)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/alex313031/atom-ng?label=Version%3A) &nbsp;![GitHub](https://img.shields.io/github/license/alex313031/atom-ng?color=green&label=License%3A) &nbsp;![GitHub commit activity](https://img.shields.io/github/commit-activity/w/alex313031/atom-ng?color=blueviolet&label=Commit%20Activity%3A)
 
 Atom is a hackable text editor for the 21st century, built on [Electron](https://github.com/electron/electron), and based on everything we love about our favorite editors. We designed it to be deeply customizable, but still approachable using the default configuration.
 
