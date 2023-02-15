@@ -16,8 +16,8 @@ module.exports = packagedAppPath => {
     title: CONFIG.appName,
     exe: CONFIG.executableName,
     appDirectory: packagedAppPath,
-    authors: 'GitHub Inc.',
-    iconUrl: `https://raw.githubusercontent.com/atom/atom/master/resources/app-icons/${
+    authors: 'GitHub Inc. and Alex313031',
+    iconUrl: `https://raw.githubusercontent.com/Alex313031/atom-ng/master/resources/app-icons/${
       CONFIG.channel
     }/atom.ico`,
     loadingGif: path.join(
@@ -28,9 +28,7 @@ module.exports = packagedAppPath => {
     ),
     outputDirectory: CONFIG.buildOutputPath,
     noMsi: true,
-    remoteReleases: `${updateUrlPrefix}/api/updates${archSuffix}?version=${
-      CONFIG.computedAppVersion
-    }`,
+    remoteReleases: `{https://github.com/Alex313031/atom-ng/blob/master/}`,
     setupExe: `AtomSetup${process.arch === 'x64' ? '-x64' : ''}.exe`,
     setupIcon: path.join(
       CONFIG.repositoryRootPath,
