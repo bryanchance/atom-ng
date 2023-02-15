@@ -1,14 +1,14 @@
-# Atom
+# Atom-ng
 
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/alex313031/atom-ng?label=Version%3A) &nbsp;![GitHub](https://img.shields.io/github/license/alex313031/atom-ng?color=green&label=License%3A) &nbsp;![GitHub commit activity](https://img.shields.io/github/commit-activity/w/alex313031/atom-ng?color=blueviolet&label=Commit%20Activity%3A)
 
-Atom is a hackable text editor for the 21st century, built on [Electron](https://github.com/electron/electron), and based on everything we love about our favorite editors. We designed it to be deeply customizable, but still approachable using the default configuration.
+Atom-ng is a hackable text editor for the 21st century, built on [Electron](https://github.com/electron/electron), and based on everything we love about our favorite editors. We designed it to be deeply customizable, but still approachable using the default configuration.
 
 ![Atom](https://user-images.githubusercontent.com/378023/49132477-f4b77680-f31f-11e8-8357-ac6491761c6c.png)
 
 ![Atom Screenshot](https://user-images.githubusercontent.com/378023/49132478-f4b77680-f31f-11e8-9e10-e8454d8d9b7e.png)
 
-Visit [atom.io](https://atom.io) to learn more or visit the [Atom forum](https://github.com/atom/atom/discussions).
+Visit https://thorium.rocks/atom-ng/ to learn more or visit the [Atom forum](https://github.com/atom/atom/discussions).
 
 Follow [@AtomEditor](https://twitter.com/atomeditor) on Twitter for important
 announcements.
