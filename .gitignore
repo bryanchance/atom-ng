@@ -8,7 +8,6 @@ Thumbs.db
 .nvm-version
 .vscode
 .python-version
-node_modules
 *.log
 /tags
 /atom-shell/
