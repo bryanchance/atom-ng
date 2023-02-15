@@ -110,13 +110,13 @@ if [ $OS == 'Mac' ]; then
   else
     # Else choose it from the inferred channel name
     if [ "$CHANNEL" == 'beta' ]; then
-      ATOM_EXECUTABLE_NAME="Atom Beta"
+      ATOM_EXECUTABLE_NAME="Atom-ng Beta"
     elif [ "$CHANNEL" == 'nightly' ]; then
-      ATOM_EXECUTABLE_NAME="Atom Nightly"
+      ATOM_EXECUTABLE_NAME="Atom-ng Nightly"
     elif [ "$CHANNEL" == 'dev' ]; then
-      ATOM_EXECUTABLE_NAME="Atom Dev"
+      ATOM_EXECUTABLE_NAME="Atom-ng Dev"
     else
-      ATOM_EXECUTABLE_NAME="Atom"
+      ATOM_EXECUTABLE_NAME="Atom-ng"
     fi
   fi
 
