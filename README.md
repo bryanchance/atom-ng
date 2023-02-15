@@ -1,4 +1,4 @@
-# Atom-ng
+# Atom-ng &nbsp;<img src="https://raw.githubusercontent.com/Alex313031/atom-ng/master/resources/app-icons/dev/png/512.png" width="48">
 
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/alex313031/atom-ng?label=Version%3A) &nbsp;![GitHub](https://img.shields.io/github/license/alex313031/atom-ng?color=green&label=License%3A) &nbsp;![GitHub commit activity](https://img.shields.io/github/commit-activity/w/alex313031/atom-ng?color=blueviolet&label=Commit%20Activity%3A)
 
