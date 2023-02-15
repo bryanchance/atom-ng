@@ -2,7 +2,7 @@
 Name=<%= appName %>
 Comment=<%= description %>
 GenericName=Text Editor
-Exec=env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false <%= installDir %>/bin/<%= appFileName %> --no-sandbox --in-process-gpu %F
+Exec=env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false <%= installDir %>/bin/<%= appFileName %> %F
 Icon=<%= iconPath %>
 StartupWMClass=atom
 Keywords=editor
@@ -15,4 +15,4 @@ Actions=enable-experimental-web-platform-features;
 
 [Desktop Action enable-experimental-web-platform-features]
 Name=<%= appName %> --enable-experimental-web-platform-features
-Exec=env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false <%= installDir %>/bin/<%= appFileName %> --no-sandbox --in-process-gpu --enable-experimental-web-platform-features %F
+Exec=env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false <%= installDir %>/bin/<%= appFileName %> --enable-experimental-web-platform-features %F
