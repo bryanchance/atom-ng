@@ -24,7 +24,6 @@
   "dependencies": {
     "@atom/fuzzy-native": "git+https://github.com/atom/fuzzy-native.git#934c5ad",
     "@atom/nsfw": "git+https://github.com/atom/nsfw.git#fe4e86a",
-    "@atom/plist": "0.4.4",
     "@atom/source-map-support": "git+https://github.com/atom/node-source-map-support.git#76400a5",
     "@atom/watcher": "git+https://github.com/atom/watcher.git#e79313c",
     "about": "file:packages/about",
