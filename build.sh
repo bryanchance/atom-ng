@@ -15,7 +15,7 @@ export LDFLAGS="-Wl,-O3" &&
 export ATOM_ELECTRON_URL='https://artifacts.electronjs.org/headers/dist' &&
 
 # Workaround for jasmine
-mkdir -p $HOME/.atom/.node-gyp &&
+mkdir -v -p $HOME/.atom/.node-gyp &&
 cp -v gitconfig $HOME/.atom/.node-gyp/.gitconfig &&
 
 # Run final bootstrap
