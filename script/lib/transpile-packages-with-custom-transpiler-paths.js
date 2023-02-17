@@ -33,7 +33,7 @@ module.exports = function() {
     const metadata = require(metadataPath);
 
     if (metadata.atomTranspilers) {
-      console.log(' transpiling for package '.cyan + packageName.cyan);
+      console.log(' - Compiling package: '.cyan + packageName.green);
       const rootPackageBackup = backupNodeModules(rootPackagePath);
       const intermediatePackageBackup = backupNodeModules(
         intermediatePackagePath
