@@ -59,13 +59,13 @@ module.exports = {
 };
 
 function getChannelName(channel) {
-  return channel === 'stable' ? 'atom' : `atom-${channel}`;
+  return channel === 'stable' ? 'atom-ng' : `atom-ng-${channel}`;
 }
 
 function getChannel(version) {
   const match = version.match(/\d+\.\d+\.\d+(-([a-z]+)(\d+|-\w{4,})?)?$/);
   if (!match) {
-    throw new Error(`Found incorrectly formatted Atom version ${version}`);
+    throw new Error(`Found incorrectly formatted Atom-ng version ${version}`);
   } else if (match[2]) {
     return match[2];
   }
@@ -75,8 +75,8 @@ function getChannel(version) {
 
 function getAppName(channel) {
   return channel === 'stable'
-    ? 'Atom'
-    : `Atom ${process.env.ATOM_CHANNEL_DISPLAY_NAME ||
+    ? 'Atom-ng'
+    : `Atom-ng ${process.env.ATOM_CHANNEL_DISPLAY_NAME ||
         channel.charAt(0).toUpperCase() + channel.slice(1)}`;
 }
 
@@ -84,9 +84,9 @@ function getExecutableName(channel, appName) {
   if (process.platform === 'darwin') {
     return appName;
   } else if (process.platform === 'win32') {
-    return channel === 'stable' ? 'atom.exe' : `atom-${channel}.exe`;
+    return channel === 'stable' ? 'atom-ng.exe' : `atom-ng-${channel}.exe`;
   } else {
-    return 'atom';
+    return 'atom-ng';
   }
 }
 
