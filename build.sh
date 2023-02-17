@@ -38,19 +38,20 @@ case $1 in
 esac
 
 # Optimization parameters
-export CFLAGS="-O3 -Wno-deprecated-declarations" &&
-export CXXFLAGS="-O3 -Wno-deprecated-declarations" &&
-export CPPFLAGS="-O3 -Wno-deprecated-declarations" &&
-export LDFLAGS="-Wl,-O3" &&
+export CFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough" &&
+export CXXFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough" &&
+export CPPFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough" &&
+export LDFLAGS="-Wl,-O3 -mavx -maes" &&
 
 # Use upstream electron
 # export ATOM_ELECTRON_URL='https://artifacts.electronjs.org/headers/dist' &&
 
+printf "${bold}${GRE} Building Atom-ng for Linux...${c0}\n" &&
+printf "\n" &&
+
 # Workaround for jasmine
 mkdir -v -p $HOME/.atom/.node-gyp &&
 cp -v gitconfig $HOME/.atom/.node-gyp/.gitconfig &&
-printf "${bold}${GRE} > Building Atom-ng for Linux...\n" &&
-printf "\n" &&
 
 # Run final bootstrap
 ./script/bootstrap &&
