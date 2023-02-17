@@ -12,8 +12,6 @@ const runApmInstall = require('./lib/run-apm-install')
 const installScriptDependencies = require('./lib/install-script-dependencies')
 const verifyMachineRequirements = require('./lib/verify-machine-requirements')
 
-require('colors');
-
 process.on('unhandledRejection', function (e) {
   console.error(e.stack || e)
   process.exit(1)
@@ -36,6 +34,9 @@ if (dependenciesFingerprint.isOutdated()) {
 if (process.platform === 'win32') deleteMsbuildFromPath()
 
 installScriptDependencies(ci)
+
+require('colors');
+
 installApm(ci)
 console.log('---- ' + 'Versions'.underline + ' ----')
 const apmVersionEnv = Object.assign({}, process.env);
