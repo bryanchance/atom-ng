@@ -60,7 +60,7 @@ module.exports = function() {
       'app-icons',
       CONFIG.channel,
       'png',
-      '1024.png'
+      '48.png'
     ),
     path.join(CONFIG.intermediateAppPath, 'resources', 'atom.png')
   );
