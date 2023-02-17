@@ -3,8 +3,6 @@
 const childProcess = require('child_process');
 const path = require('path');
 
-require('colors');
-
 module.exports = function(ci) {
   verifyNode();
   verifyPython();
@@ -15,10 +13,10 @@ function verifyNode() {
   const majorVersion = fullVersion.split('.')[0];
   const minorVersion = fullVersion.split('.')[1];
   if (majorVersion >= 11 || (majorVersion === '10' && minorVersion >= 12)) {
-    console.log(` > Node:\tv${fullVersion}`.green);
+    console.log(` > Node:\tv${fullVersion}`);
   } else {
     throw new Error(
-      `node v10.12+ is required to build Atom. node v${fullVersion} is installed.`.red
+      `node v10.12+ is required to build Atom. node v${fullVersion} is installed.`
     );
   }
 }
@@ -100,7 +98,7 @@ function verifyPython() {
         binaryPlusFlag = binary;
       }
       triedLog = triedLog.concat(
-        `log message: tried to check version of "${binaryPlusFlag}", got: "${fullVersion}"\n`.red
+        `Log message: tried to check version of "${binaryPlusFlag}", got: "${fullVersion}"\n`
       );
     }
   }
@@ -112,7 +110,7 @@ function verifyPython() {
         throw new Error(
           `NODE_GYP_FORCE_PYTHON is set to: "${binary}", but this is not a valid Python.\n` +
             'Please set NODE_GYP_FORCE_PYTHON to something valid, or unset it entirely.\n' +
-            '(Python 2.6, 2.7 or 3.5+ is required to build Atom.)\n'.red
+            '(Python 2.6, 2.7 or 3.5+ is required to build Atom.)\n'
         );
       }
     }
@@ -137,11 +135,11 @@ function verifyPython() {
   }
 
   if (usablePythonWasFound) {
-    console.log(` > Python:\tv${fullVersion}`.green);
+    console.log(` > Python:\tv${fullVersion}`);
   } else {
     throw new Error(
       `\n${triedLog}\n` +
-        'Python 2.6, 2.7 or 3.5+ is required to build Atom.\n'.red +
+        'Python 2.6, 2.7 or 3.5+ is required to build Atom.\n' +
         'verify-machine-requirements.js was unable to find such a version of Python.\n' +
         "Set the PYTHON env var to e.g. 'C:/path/to/Python27/python.exe'\n" +
         'if your Python is installed in a non-default location.\n'
