@@ -12,6 +12,8 @@ const runApmInstall = require('./lib/run-apm-install')
 const installScriptDependencies = require('./lib/install-script-dependencies')
 const verifyMachineRequirements = require('./lib/verify-machine-requirements')
 
+require('colors');
+
 process.on('unhandledRejection', function (e) {
   console.error(e.stack || e)
   process.exit(1)
@@ -21,7 +23,7 @@ process.on('unhandledRejection', function (e) {
 let ci = process.argv.indexOf('--ci') !== -1
 
 if (!ci && process.env.CI === 'true' && process.argv.indexOf('--no-ci') === -1) {
-  console.log('Automatically enabling --ci because CI is set in the environment')
+  console.log('Automatically enabling --ci because CI is set in the environment...')
   ci = true
 }
 
@@ -35,6 +37,7 @@ if (process.platform === 'win32') deleteMsbuildFromPath()
 
 installScriptDependencies(ci)
 installApm(ci)
+console.log('---- ' + 'Versions'.underline + ' ----')
 const apmVersionEnv = Object.assign({}, process.env);
 // Set resource path so that apm can load Atom's version.
 apmVersionEnv.ATOM_RESOURCE_PATH = CONFIG.repositoryRootPath;
@@ -43,6 +46,7 @@ childProcess.execFileSync(
   ['--version'],
   {stdio: 'inherit', env: apmVersionEnv}
 )
+console.log('------------------')
 runApmInstall(CONFIG.repositoryRootPath, ci)
 
 dependenciesFingerprint.write()
