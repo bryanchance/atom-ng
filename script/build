@@ -3,7 +3,8 @@
 'use strict'
 
 if (process.argv.includes('--no-bootstrap')) {
-  console.log('Skipping bootstrap')
+  require('colors')
+  console.log('WARNING: Skipping bootstrap...'.red)
 } else {
   // Bootstrap first to ensure all the dependencies used later in this script
   // are installed.
