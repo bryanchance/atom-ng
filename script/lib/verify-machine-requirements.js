@@ -3,6 +3,8 @@
 const childProcess = require('child_process');
 const path = require('path');
 
+require('colors');
+
 module.exports = function(ci) {
   verifyNode();
   verifyPython();
@@ -13,10 +15,10 @@ function verifyNode() {
   const majorVersion = fullVersion.split('.')[0];
   const minorVersion = fullVersion.split('.')[1];
   if (majorVersion >= 11 || (majorVersion === '10' && minorVersion >= 12)) {
-    console.log(`Node:\tv${fullVersion}`);
+    console.log(`Node:\tv${fullVersion}`.green);
   } else {
     throw new Error(
-      `node v10.12+ is required to build Atom. node v${fullVersion} is installed.`
+      `node v10.12+ is required to build Atom. node v${fullVersion} is installed.`.red
     );
   }
 }
@@ -98,7 +100,7 @@ function verifyPython() {
         binaryPlusFlag = binary;
       }
       triedLog = triedLog.concat(
-        `log message: tried to check version of "${binaryPlusFlag}", got: "${fullVersion}"\n`
+        `log message: tried to check version of "${binaryPlusFlag}", got: "${fullVersion}"\n`.red
       );
     }
   }
@@ -110,7 +112,7 @@ function verifyPython() {
         throw new Error(
           `NODE_GYP_FORCE_PYTHON is set to: "${binary}", but this is not a valid Python.\n` +
             'Please set NODE_GYP_FORCE_PYTHON to something valid, or unset it entirely.\n' +
-            '(Python 2.6, 2.7 or 3.5+ is required to build Atom.)\n'
+            '(Python 2.6, 2.7 or 3.5+ is required to build Atom.)\n'.red
         );
       }
     }
@@ -135,11 +137,11 @@ function verifyPython() {
   }
 
   if (usablePythonWasFound) {
-    console.log(`Python:\tv${fullVersion}`);
+    console.log(`Python:\tv${fullVersion}`.green);
   } else {
     throw new Error(
       `\n${triedLog}\n` +
-        'Python 2.6, 2.7 or 3.5+ is required to build Atom.\n' +
+        'Python 2.6, 2.7 or 3.5+ is required to build Atom.\n'.red +
         'verify-machine-requirements.js was unable to find such a version of Python.\n' +
         "Set the PYTHON env var to e.g. 'C:/path/to/Python27/python.exe'\n" +
         'if your Python is installed in a non-default location.\n'
