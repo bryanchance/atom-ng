@@ -1,0 +1,4 @@
+target=v12.18.3
+node-version=12.18.3
+package-lock=true
+strict-peer-dependencies=false
