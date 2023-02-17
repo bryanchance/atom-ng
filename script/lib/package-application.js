@@ -14,6 +14,8 @@ const template = require('lodash.template');
 const CONFIG = require('../config');
 const HOST_ARCH = hostArch();
 
+require('colors');
+
 module.exports = function() {
   const appName = getAppName();
   console.log(
@@ -23,7 +25,7 @@ module.exports = function() {
   );
   return runPackager({
     appBundleId: 'com.github.atom',
-    appCopyright: `Copyright © 2014-${new Date().getFullYear()} GitHub, Inc. All rights reserved.`,
+    appCopyright: `Copyright © 2014-${new Date().getFullYear()} GitHub, Inc. & Alex313031 All rights reserved.`,
     appVersion: CONFIG.appMetadata.version,
     arch: process.platform === 'darwin' ? 'x64' : HOST_ARCH, // OS X is 64-bit only
     asar: { unpack: buildAsarUnpackGlobExpression() },
@@ -53,8 +55,8 @@ module.exports = function() {
     // Atom doesn't have devDependencies, but if prune is true, it will delete the non-standard packageDependencies.
     prune: false,
     win32metadata: {
-      CompanyName: 'GitHub, Inc.',
-      FileDescription: 'Atom',
+      CompanyName: 'Alex313031',
+      FileDescription: 'Atom-ng',
       ProductName: CONFIG.appName
     }
   }).then(packagedAppPath => {
@@ -75,7 +77,7 @@ module.exports = function() {
 
     return copyNonASARResources(packagedAppPath, bundledResourcesPath).then(
       () => {
-        console.log(`Application bundle created at ${packagedAppPath}`);
+        console.log(`Application bundle created at ` + `${packagedAppPath}`.green);
         return packagedAppPath;
       }
     );
@@ -207,9 +209,9 @@ function getAppName() {
   if (process.platform === 'darwin') {
     return CONFIG.appName;
   } else if (process.platform === 'win32') {
-    return CONFIG.channel === 'stable' ? 'atom' : `atom-${CONFIG.channel}`;
+    return CONFIG.channel === 'stable' ? 'atom-ng' : `atom-ng-${CONFIG.channel}`;
   } else {
-    return 'atom';
+    return 'atom-ng';
   }
 }
 
@@ -236,7 +238,7 @@ function renamePackagedAppDir(packageOutputDirPath) {
     );
   } else if (process.platform === 'linux') {
     const appName =
-      CONFIG.channel !== 'stable' ? `atom-${CONFIG.channel}` : 'atom';
+      CONFIG.channel !== 'stable' ? `atom-ng-${CONFIG.channel}` : 'atom-ng';
     let architecture;
     if (HOST_ARCH === 'ia32') {
       architecture = 'i386';
