@@ -15,7 +15,7 @@ function verifyNode() {
   const majorVersion = fullVersion.split('.')[0];
   const minorVersion = fullVersion.split('.')[1];
   if (majorVersion >= 11 || (majorVersion === '10' && minorVersion >= 12)) {
-    console.log(`Node:\tv${fullVersion}`.green);
+    console.log(` > Node:\tv${fullVersion}`.green);
   } else {
     throw new Error(
       `node v10.12+ is required to build Atom. node v${fullVersion} is installed.`.red
@@ -137,7 +137,7 @@ function verifyPython() {
   }
 
   if (usablePythonWasFound) {
-    console.log(`Python:\tv${fullVersion}`.green);
+    console.log(` > Python:\tv${fullVersion}`.green);
   } else {
     throw new Error(
       `\n${triedLog}\n` +
