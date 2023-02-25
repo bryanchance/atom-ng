@@ -1,10 +1,10 @@
 {
   "name": "welcome",
-  "version": "0.36.9",
-  "description": "Welcome users to Atom with useful information",
+  "version": "0.37.0",
+  "description": "Welcome users to Atom-ng with useful information",
   "main": "./lib/main",
   "atomTestRunner": "atom-mocha-test-runner",
-  "repository": "https://github.com/atom/atom",
+  "repository": "https://github.com/Alex313031/atom-ng",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
@@ -28,7 +28,7 @@
     },
     "showSunsettingOnStartup": {
       "type": "boolean",
-      "default": true,
+      "default": false,
       "description": "Show sunsetting pane when opening a new Atom window."
     }
   },
