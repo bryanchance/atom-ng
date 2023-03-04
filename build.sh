@@ -19,24 +19,37 @@ try() { "$@" || die "${RED}Failed $*"; }
 displayHelp () {
 	printf "\n" &&
 	printf "${bold}${GRE}Script to build Atom-ng on Linux.${c0}\n" &&
-	printf "${bold}${YEL}Use the --install-deps flag to install build dependencies.${c0}\n" &&
+	printf "${bold}${YEL}Use the --deps flag to install build dependencies.${c0}\n" &&
+	printf "${bold}${YEL}Use the --build flag to build Atom-ng.${c0}\n" &&
+	printf "${bold}${YEL}Use the --clean flag to run \`npm run clean\`.${c0}\n" &&
+	printf "${bold}${YEL}Use the --dist flag to generate .tar.xz and .deb packages.${c0}\n" &&
 	printf "${bold}${YEL}Use the --help flag to show this help.${c0}\n" &&
 	printf "\n"
 }
+case $1 in
+	--help) displayHelp; exit 0;;
+esac
 
 # Install prerequisites
 installDeps () {
 	sudo apt-get install build-essential git libsecret-1-dev fakeroot rpm libx11-dev libxkbfile-dev nodejs npm node-gyp node-istanbul
 }
-
 case $1 in
-	--help) displayHelp; exit 0;;
+	--deps) installDeps; exit 0;;
 esac
 
+cleanAtom () {
+	printf "\n" &&
+	printf "${bold}${YEL} Cleaning artifacts and build directory...${c0}\n" &&
+	printf "\n" &&
+	
+	npm run clean
+}
 case $1 in
-	--install-deps) installDeps; exit 0;;
+	--clean) cleanAtom; exit 0;;
 esac
 
+buildAtom () {
 # Optimization parameters
 export CFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough" &&
 export CXXFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough" &&
@@ -46,6 +59,7 @@ export LDFLAGS="-Wl,-O3 -mavx -maes" &&
 # Use upstream electron
 # export ATOM_ELECTRON_URL='https://artifacts.electronjs.org/headers/dist' &&
 
+printf "\n" &&
 printf "${bold}${GRE} Building Atom-ng for Linux...${c0}\n" &&
 printf "\n" &&
 
@@ -56,7 +70,49 @@ cp -v gitconfig $HOME/.atom/.node-gyp/.gitconfig &&
 # Run final bootstrap
 ./script/bootstrap &&
 
-# Build linux package and archive for distribution
-./script/build $@
+# Build for linux
+./script/build
+}
+case $1 in
+	--build) buildAtom; exit 0;;
+esac
 
+packageAtom () {
+# Optimization parameters
+export CFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough" &&
+export CXXFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough" &&
+export CPPFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough" &&
+export LDFLAGS="-Wl,-O3 -mavx -maes" &&
+
+# Use upstream electron
+# export ATOM_ELECTRON_URL='https://artifacts.electronjs.org/headers/dist' &&
+
+printf "\n" &&
+printf "${bold}${GRE} Generating installation packages...${c0}\n" &&
+printf "\n" &&
+
+# Workaround for jasmine
+mkdir -v -p $HOME/.atom/.node-gyp &&
+cp -v gitconfig $HOME/.atom/.node-gyp/.gitconfig &&
+
+# Run final bootstrap
+./script/bootstrap &&
+
+# Build linux package and archive for distribution
+./script/build --create-debian-package --compress-artifacts
+}
+case $1 in
+	--dist) packageAtom; exit 0;;
+esac
+
+printf "\n" &&
+printf "${bold}${GRE}Script to build Atom-ng on Linux.${c0}\n" &&
+printf "${bold}${YEL}Use the --deps flag to install build dependencies.${c0}\n" &&
+printf "${bold}${YEL}Use the --build flag to build Atom-ng.${c0}\n" &&
+printf "${bold}${YEL}Use the --clean flag to run \`npm run clean\`.${c0}\n" &&
+printf "${bold}${YEL}Use the --dist flag to generate .tar.xz and .deb packages.${c0}\n" &&
+printf "${bold}${YEL}Use the --help flag to show this help.${c0}\n" &&
+printf "\n" &&
+
+tput sgr0 &&
 exit 0
