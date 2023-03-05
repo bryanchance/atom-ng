@@ -8,7 +8,7 @@ module.exports = function(params) {
   const parsedUploadToServer = uploadToServer !== null ? uploadToServer : false;
 
   crashReporter.start({
-    productName: 'Atom',
+    productName: 'Atom-ng',
     companyName: 'GitHub',
     submitURL: 'https://atom.io/crash_reports',
     parsedUploadToServer,

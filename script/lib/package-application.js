@@ -130,7 +130,7 @@ function copyNonASARResources(packagedAppPath, bundledResourcesPath) {
         'png',
         '1024.png'
       ),
-      path.join(packagedAppPath, 'atom.png')
+      path.join(packagedAppPath, 'atom-ng.png')
     );
   } else if (process.platform === 'win32') {
     [
@@ -199,7 +199,8 @@ function buildAsarUnpackGlobExpression() {
     path.join('**', 'node_modules', 'dugite', 'git', '**'),
     path.join('**', 'node_modules', 'github', 'bin', '**'),
     path.join('**', 'node_modules', 'vscode-ripgrep', 'bin', '**'),
-    path.join('**', 'resources', 'atom.png')
+    path.join('**', 'resources', 'atom-ng.png'),
+    path.join('**', 'resources', 'atom-ng-pixmap.png')
   ];
 
   return `{${unpack.join(',')}}`;

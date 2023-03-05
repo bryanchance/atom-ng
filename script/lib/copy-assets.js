@@ -60,9 +60,20 @@ module.exports = function() {
       'app-icons',
       CONFIG.channel,
       'png',
-      '48.png'
+      '64.png'
     ),
-    path.join(CONFIG.intermediateAppPath, 'resources', 'atom.png')
+    path.join(CONFIG.intermediateAppPath, 'resources', 'atom-ng.png')
+  );
+  fs.copySync(
+    path.join(
+      CONFIG.repositoryRootPath,
+      'resources',
+      'app-icons',
+      CONFIG.channel,
+      'png',
+      '256.png'
+    ),
+    path.join(CONFIG.intermediateAppPath, 'resources', 'atom-ng-pixmap.png')
   );
 };
 

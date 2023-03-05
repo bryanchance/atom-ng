@@ -10,13 +10,13 @@ else
 fi
 
 case $(basename $0) in
-  atom-beta)
+  atom-ng-beta)
     CHANNEL=beta
     ;;
-  atom-nightly)
+  atom-ng-nightly)
     CHANNEL=nightly
     ;;
-  atom-dev)
+  atom-ng-dev)
     CHANNEL=dev
     ;;
   *)
@@ -155,16 +155,16 @@ elif [ $OS == 'Linux' ]; then
 
   case $CHANNEL in
     beta)
-      ATOM_PATH="$USR_DIRECTORY/share/atom-beta/atom"
+      ATOM_PATH="$USR_DIRECTORY/share/atom-ng-beta/atom-ng"
       ;;
     nightly)
-      ATOM_PATH="$USR_DIRECTORY/share/atom-nightly/atom"
+      ATOM_PATH="$USR_DIRECTORY/share/atom-ng-nightly/atom-ng"
       ;;
     dev)
-      ATOM_PATH="$USR_DIRECTORY/share/atom-dev/atom"
+      ATOM_PATH="$USR_DIRECTORY/share/atom-ng-dev/atom-ng"
       ;;
     *)
-      ATOM_PATH="$USR_DIRECTORY/share/atom/atom"
+      ATOM_PATH="$USR_DIRECTORY/share/atom-ng/atom-ng"
       ;;
   esac
 
@@ -175,10 +175,10 @@ elif [ $OS == 'Linux' ]; then
 
   : ${TMPDIR:=/tmp}
 
-  [ -x "$ATOM_PATH" ] || ATOM_PATH="$TMPDIR/atom-build/Atom/atom"
+  [ -x "$ATOM_PATH" ]
 
   if [ $EXPECT_OUTPUT ]; then
-    "$ATOM_PATH" --executed-from="$(pwd)" --pid=$$ "$@"
+    "$ATOM_PATH" --disable-gpu-sandbox --executed-from="$(pwd)" --pid=$$ "$@"
     ATOM_EXIT=$?
     if [ ${ATOM_EXIT} -eq 0 ] && [ -n "${EXIT_CODE_OVERRIDE}" ]; then
       exit "${EXIT_CODE_OVERRIDE}"
@@ -187,7 +187,7 @@ elif [ $OS == 'Linux' ]; then
     fi
   else
     (
-    nohup "$ATOM_PATH" --executed-from="$(pwd)" --pid=$$ "$@" > "$ATOM_HOME/nohup.out" 2>&1
+    nohup "$ATOM_PATH" --disable-gpu-sandbox --executed-from="$(pwd)" --pid=$$ "$@" > "$ATOM_HOME/nohup.out" 2>&1
     if [ $? -ne 0 ]; then
       cat "$ATOM_HOME/nohup.out"
       exit $?

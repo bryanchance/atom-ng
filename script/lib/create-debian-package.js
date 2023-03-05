@@ -11,7 +11,7 @@ const CONFIG = require('../config');
 module.exports = function(packagedAppPath) {
   console.log(`Creating Debian package for "${packagedAppPath}"`);
   const atomExecutableName =
-    CONFIG.channel === 'stable' ? 'atom' : `atom-${CONFIG.channel}`;
+    CONFIG.channel === 'stable' ? 'atom-ng' : `atom-ng-${CONFIG.channel}`;
   const apmExecutableName =
     CONFIG.channel === 'stable' ? 'apm' : `apm-${CONFIG.channel}`;
   const appDescription = CONFIG.appMetadata.description;
@@ -29,7 +29,7 @@ module.exports = function(packagedAppPath) {
 
   const outputDebianPackageFilePath = path.join(
     CONFIG.buildOutputPath,
-    `atom-${arch}.deb`
+    `atom-ng-${arch}.deb`
   );
   const debianPackageDirPath = path.join(
     os.tmpdir(),
@@ -175,7 +175,7 @@ module.exports = function(packagedAppPath) {
       'resources',
       'app.asar.unpacked',
       'resources',
-      'atom.png'
+      'atom-ng-pixmap.png'
     ),
     path.join(debianPackageIconsDirPath, `${atomExecutableName}.png`)
   );

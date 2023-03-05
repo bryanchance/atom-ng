@@ -4,7 +4,7 @@ Comment=<%= description %>
 GenericName=Text Editor
 Exec=env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false <%= installDir %>/bin/<%= appFileName %> %F
 Icon=<%= iconPath %>
-StartupWMClass=Atom-ng
+StartupWMClass=atom-ng
 Keywords=editor
 X-MultipleArgs=True
 Type=Application
