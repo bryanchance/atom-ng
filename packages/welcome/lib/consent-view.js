@@ -127,7 +127,7 @@ export default class ConsentView {
   }
 
   consent() {
-    atom.config.set('core.telemetryConsent', 'limited');
+    atom.config.set('core.telemetryConsent', 'no');
     atom.workspace.closeActivePaneItemOrEmptyPaneOrWindow();
   }
 

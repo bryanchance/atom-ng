@@ -39,7 +39,10 @@ module.exports = function start(resourcePath, devResourcePath, startTime) {
   // TodoElectronIssue this should be set to true before Electron 12 - https://github.com/electron/electron/issues/18397
   app.allowRendererProcessReuse = false;
 
+  app.commandLine.appendSwitch('no-sandbox');
   app.commandLine.appendSwitch('enable-experimental-web-platform-features');
+  app.commandLine.appendSwitch('new-canvas-2d-api');
+  app.commandLine.appendSwitch('ignore-gpu-blocklist');
 
   const args = parseCommandLine(process.argv.slice(1));
 
@@ -112,7 +115,6 @@ module.exports = function start(resourcePath, devResourcePath, startTime) {
   StartupTime.addMarker('main-process:electron-onready:start');
   app.on('ready', function() {
     StartupTime.addMarker('main-process:electron-onready:end');
-    app.allowRendererProcessReuse = false,
     app.removeListener('open-file', addPathToOpen);
     app.removeListener('open-url', addUrlToOpen);
     const AtomApplication = require(path.join(

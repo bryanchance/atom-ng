@@ -161,10 +161,6 @@
     };
 
     const { userSettings, appVersion } = getWindowLoadSettings();
-    const uploadToServer =
-      userSettings &&
-      userSettings.core &&
-      userSettings.core.telemetryConsent === 'limited';
     const releaseChannel = getReleaseChannel(appVersion);
 
     const CSON = useSnapshot

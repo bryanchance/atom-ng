@@ -45,13 +45,13 @@ module.exports = class AboutView extends EtchComponent {
 
   handleTermsOfUseClick(e) {
     e.preventDefault();
-    shell.openExternal('https://atom.io/terms');
+    shell.openExternal('https://docs.github.com/articles/github-terms-of-service');
   }
 
   handleHowToUpdateClick(e) {
     e.preventDefault();
     shell.openExternal(
-      'https://flight-manual.atom.io/getting-started/sections/installing-atom/'
+      'https://web.archive.org/web/20221201143209/https://flight-manual.atom.io/getting-started/sections/installing-atom/'
     );
   }
 
@@ -79,7 +79,7 @@ module.exports = class AboutView extends EtchComponent {
         $.header(
           { className: 'about-header' },
           $.a(
-            { className: 'about-atom-io', href: 'https://atom.io' },
+            { className: 'about-atom-io', href: 'https://thorium.rocks/atom-ng/' },
             $(AtomLogo)
           ),
           $.div(
@@ -198,10 +198,10 @@ module.exports = class AboutView extends EtchComponent {
 
       $.div(
         { className: 'about-credits group-item' },
-        $.span({ className: 'inline' }, 'And the awesome '),
+        $.span({ className: 'inline' }, 'And with care by '),
         $.a(
-          { href: 'https://github.com/atom/atom/contributors' },
-          'Atom Community'
+          { href: 'https://github.com/Alex313031/' },
+          'Alex313031.'
         )
       )
     );

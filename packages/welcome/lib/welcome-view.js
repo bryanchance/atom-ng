@@ -36,7 +36,7 @@ export default class WelcomeView {
       <div className="welcome">
         <div className="welcome-container">
           <header className="welcome-header">
-            <a href="https://atom.io/">
+            <a href="https://thorium.rocks/atom-ng/">
               <svg
                 className="welcome-logo"
                 width="330px"
@@ -99,17 +99,17 @@ export default class WelcomeView {
               <li>
                 The{' '}
                 <a
-                  href="https://www.atom.io/docs"
+                  href="https://github.com/Alex313031/atom-ng/tree/master/docs"
                   dataset={{ event: 'atom-docs' }}
                 >
-                  Atom docs
+                  Atom-ng docs
                 </a>{' '}
                 for Guides and the API reference.
               </li>
               <li>
-                The Atom forum at{' '}
+                The Atom-ng forum at{' '}
                 <a
-                  href="https://github.com/atom/atom/discussions"
+                  href="https://github.com/Alex313031/atom-ng/discussions"
                   dataset={{ event: 'discussions' }}
                 >
                   Github Discussions
@@ -136,13 +136,13 @@ export default class WelcomeView {
                 checked={atom.config.get('welcome.showOnStartup')}
                 onchange={this.didChangeShowOnStartup}
               />
-              Show Welcome Guide when opening Atom
+              Show Welcome Guide when opening Atom-ng
             </label>
           </section>
 
           <footer className="welcome-footer">
-            <a href="https://atom.io/" dataset={{ event: 'footer-atom-io' }}>
-              atom.io
+            <a href="https://thorium.rocks/atom-ng/" dataset={{ event: 'footer-atom-io' }}>
+              Atom-ng Homepage
             </a>{' '}
             <span className="text-subtle">×</span>{' '}
             <a
@@ -161,7 +161,7 @@ export default class WelcomeView {
   }
 
   getTitle() {
-    return 'Welcome';
+    return 'Welcome!';
   }
 
   isEqual(other) {

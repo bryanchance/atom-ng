@@ -56,7 +56,7 @@ export default class WelcomePackage {
       )
     );
 
-    if (atom.config.get('core.telemetryConsent') === 'undecided') {
+    if (atom.config.get('welcome.showTelemetryConsent')) {
       await atom.workspace.open(CONSENT_URI);
     }
 

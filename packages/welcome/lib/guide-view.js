@@ -28,7 +28,7 @@ export default class GuideView {
       <div className="welcome is-guide">
         <div className="welcome-container">
           <section className="welcome-panel">
-            <h1 className="welcome-title">Get to know Atom!</h1>
+            <h1 className="welcome-title"><a title="Atom Introduction Video" href="https://thorium.rocks/atom-ng/Introducing_Atom_1.0!.mp4">Get to know Atom-ng!</a></h1>
 
             <details
               className="welcome-card"
