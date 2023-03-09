@@ -112,6 +112,7 @@ module.exports = function start(resourcePath, devResourcePath, startTime) {
   StartupTime.addMarker('main-process:electron-onready:start');
   app.on('ready', function() {
     StartupTime.addMarker('main-process:electron-onready:end');
+    app.allowRendererProcessReuse = false,
     app.removeListener('open-file', addPathToOpen);
     app.removeListener('open-url', addUrlToOpen);
     const AtomApplication = require(path.join(

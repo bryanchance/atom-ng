@@ -3,7 +3,7 @@
   "author": "Alex313031 <https://github.com/Alex313031>",
   "appName": "atom-ng",
   "productName": "Atom-ng",
-  "version": "1.65.4-dev",
+  "version": "1.66.1-dev",
   "description": "A hackable text editor for the 21st Century.",
   "main": "./src/main-process/main.js",
   "branding": {
@@ -20,7 +20,7 @@
     "url": "https://github.com/Alex313031/atom-ng/issues"
   },
   "license": "MIT",
-  "electronVersion": "11.5.0",
+  "electronVersion": "12.2.3",
   "dependencies": {
     "@atom/fuzzy-native": "git+https://github.com/atom/fuzzy-native.git#934c5ad",
     "@atom/nsfw": "git+https://github.com/atom/nsfw.git#fe4e86a",
@@ -171,7 +171,7 @@
     "temp": "0.9.2",
     "text-buffer": "^13.18.6",
     "timecop": "git+https://github.com/atom/timecop.git#59da87f",
-    "tree-sitter": "git+https://github.com/DeeDeeG/node-tree-sitter.git#bb298eaae66e0c4f11908cb6209f3e141884e88e",
+    "tree-sitter": "git+https://github.com/Alex313031/node-tree-sitter.git#bda3ef7",
     "tree-view": "git+https://github.com/atom/tree-view.git#13053fe",
     "typescript-simple": "8.0.6",
     "underscore-plus": "^1.7.0",
