@@ -286,6 +286,12 @@
     "build": "node script/build",
     "clean": "node script/clean"
   },
+  "devDependencies": {
+    "electron": "12.2.3",
+    "node": "14.21.3",
+    "npm": "6.14.18",
+    "node-gyp": "6.1.0"
+  },
   "standard-engine": "./script/node_modules/standard",
   "standard": {
     "env": {

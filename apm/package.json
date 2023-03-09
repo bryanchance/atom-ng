@@ -7,9 +7,14 @@
     "url": "https://github.com/Alex313031/apm-ng"
   },
   "dependencies": {
-    "atom-package-manager": "git+https://github.com/Alex313031/apm-ng.git#946241b"
+    "atom-package-manager": "git+https://github.com/Alex313031/apm-ng.git#f5ecf31"
   },
   "packageDependencies": {
     "atom-package-manager": "2.6.7"
+  },
+  "devDependencies": {
+    "node": "14.21.3",
+    "npm": "6.14.18",
+    "node-gyp": "6.1.0"
   }
 }
