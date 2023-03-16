@@ -160,7 +160,7 @@
     "service-hub": "^0.7.4",
     "settings-view": "git+https://github.com/atom/settings-view.git#65ab1f5",
     "sinon": "9.2.1",
-    "snippets": "git+https://github.com/Alex313031/snippets-ng.git#6176e45",
+    "snippets": "git+https://github.com/Alex313031/snippets-ng.git#a63e410",
     "solarized-dark-syntax": "file:packages/solarized-dark-syntax",
     "solarized-light-syntax": "file:packages/solarized-light-syntax",
     "spell-check": "git+https://github.com/atom/spell-check.git#2807392",
