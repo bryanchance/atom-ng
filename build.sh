@@ -54,7 +54,7 @@ buildAtom () {
 export CFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type" &&
 export CXXFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type" &&
 export CPPFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type" &&
-export LDFLAGS="-Wl,-O3 -mavx -maes" &&
+export LDFLAGS="-Wl,-O3 -mavx -maes -s" &&
 
 # Use upstream electron
 # export ATOM_ELECTRON_URL='https://artifacts.electronjs.org/headers/dist' &&
@@ -82,7 +82,7 @@ packageAtom () {
 export CFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type" &&
 export CXXFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type" &&
 export CPPFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type" &&
-export LDFLAGS="-Wl,-O3 -mavx -maes" &&
+export LDFLAGS="-Wl,-O3 -mavx -maes -s" &&
 
 # Use upstream electron
 # export ATOM_ELECTRON_URL='https://artifacts.electronjs.org/headers/dist' &&
