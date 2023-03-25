@@ -158,12 +158,58 @@
     font-size: 3.6em;
     height: .36em;
   }
+
+  .author {
+    font-size: 1.05em;
+  }
 }
 
 .about-credits {
   color: @text-color-subtle;
+  .icon::before {
+    // Make these octicons look good inlined with text
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-right: 0;
+    font-size: 1.5em;
+    vertical-align: text-top;
+  }
+
+  .icon-logo-github::before {
+    font-size: 3.6em;
+    height: .36em;
+  }
 }
 
+.about-yiff {
+  color: @text-color-subtle;
+  .icon::before {
+    // Make these octicons look good inlined with text
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-right: 0;
+    font-size: 1.5em;
+    vertical-align: text-top;
+  }
+
+  &:hover {
+    color: lighten(@text-color-subtle, 15%);
+  }
+  &:active {
+    color: lighten(@text-color-subtle, 30%);
+  }
+
+  .yiff {
+    width: 450px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    content: url('./images/Roxy_Upskirt.jpg');
+  }
+}
 
 // the blue squirrel --------------------------------
 

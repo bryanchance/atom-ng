@@ -584,20 +584,20 @@ module.exports = class AtomApplication extends EventEmitter {
     });
 
     this.on('application:open-documentation', () =>
-      shell.openExternal('http://flight-manual.atom.io')
+      shell.openExternal('https://web.archive.org/web/20221130005947/https://flight-manual.atom.io/')
     );
     this.on('application:open-discussions', () =>
-      shell.openExternal('https://github.com/atom/atom/discussions')
+      shell.openExternal('https://github.com/Alex313031/atom-ng/discussions')
     );
     this.on('application:open-faq', () =>
-      shell.openExternal('https://atom.io/faq')
+      shell.openExternal('https://web.archive.org/web/20221130005947/https://flight-manual.atom.io/faq')
     );
     this.on('application:open-terms-of-use', () =>
-      shell.openExternal('https://atom.io/terms')
+      shell.openExternal('https://docs.github.com/articles/github-terms-of-service')
     );
     this.on('application:report-issue', () =>
       shell.openExternal(
-        'https://github.com/atom/atom/blob/master/CONTRIBUTING.md#reporting-bugs'
+        'https://github.com/Alex313031/atom-ng/blob/master/CONTRIBUTING.md#reporting-bugs'
       )
     );
     this.on('application:search-issues', () =>

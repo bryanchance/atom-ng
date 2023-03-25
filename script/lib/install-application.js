@@ -77,13 +77,13 @@ module.exports = function(packagedAppPath, installDir) {
     }
   } else {
     const atomExecutableName =
-      CONFIG.channel === 'stable' ? 'atom' : 'atom-' + CONFIG.channel;
+      CONFIG.channel === 'stable' ? 'atom-ng' : 'atom-ng-' + CONFIG.channel;
     const apmExecutableName =
       CONFIG.channel === 'stable' ? 'apm' : 'apm-' + CONFIG.channel;
     const appName =
       CONFIG.channel === 'stable'
-        ? 'Atom'
-        : startCase('Atom ' + CONFIG.channel);
+        ? 'Atom-ng'
+        : startCase('Atom-ng ' + CONFIG.channel);
     const appDescription = CONFIG.appMetadata.description;
     const prefixDirPath =
       installDir !== '' ? handleTilde(installDir) : path.join('/usr', 'local');

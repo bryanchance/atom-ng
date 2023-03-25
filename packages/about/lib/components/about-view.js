@@ -71,6 +71,22 @@ module.exports = class AboutView extends EtchComponent {
     }
   }
 
+  handleShowYiffClick(e) {
+    e.preventDefault();
+    var showYiffDiv = document.querySelector('.show-yiff');
+    var showYiffText = document.querySelector('.about-yiff-expand');
+    switch (showYiffText.textContent) {
+      case 'Show naughty stuffz':
+        showYiffDiv.classList.toggle('hide');
+        showYiffText.textContent = 'Hide naughty stuffz';
+        break;
+      case 'Hide naughty stuffz':
+        showYiffDiv.classList.toggle('hide');
+        showYiffText.textContent = 'Show naughty stuffz';
+        break;
+    }
+  }
+
   render() {
     return $.div(
       { className: 'pane-item native-key-bindings about' },
@@ -79,7 +95,7 @@ module.exports = class AboutView extends EtchComponent {
         $.header(
           { className: 'about-header' },
           $.a(
-            { className: 'about-atom-io', href: 'https://thorium.rocks/atom-ng/' },
+            { className: 'about-atom-io', title: 'Atom-ng Banner', href: 'https://thorium.rocks/atom-ng/' },
             $(AtomLogo)
           ),
           $.div(
@@ -193,17 +209,24 @@ module.exports = class AboutView extends EtchComponent {
         $.span({ className: 'inline' }, ' with '),
         $.span({ className: 'icon icon-heart' }),
         $.span({ className: 'inline' }, ' by '),
-        $.a({ className: 'icon icon-logo-github', href: 'https://github.com' })
+        $.a(
+          { className: 'author', title: 'Author' },
+          { href: 'https://github.com/Alex313031/' },
+          'Alex313031'
+        )
       ),
 
       $.div(
         { className: 'about-credits group-item' },
         $.span({ className: 'inline' }, 'And with care by '),
-        $.a(
-          { href: 'https://github.com/Alex313031/' },
-          'Alex313031.'
-        )
-      )
+        $.a({ className: 'icon icon-logo-github', title: 'GitHub Homepage', href: 'https://github.com' })
+      ),
+
+      $.div(
+        { className: 'about-yiff group-item', onclick: this.handleShowYiffClick.bind(this) },
+        $.span({ className: 'inline about-yiff-expand' }, 'Show naughty stuffz'),
+        $.div({ className: 'yiff hide show-yiff', title: 'Roxy&#39;s Upskirt' })
+      )      
     );
   }
 

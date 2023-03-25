@@ -1,6 +1,6 @@
 {
   "name": "welcome",
-  "version": "0.37.1",
+  "version": "0.37.3",
   "description": "Welcome users to Atom-ng with useful information",
   "main": "./lib/main",
   "atomTestRunner": "atom-mocha-test-runner",
@@ -14,11 +14,6 @@
     "test": "atom --test test/*.test.js"
   },
   "consumedServices": {
-    "metrics-reporter": {
-      "versions": {
-        "^1.1.0": "consumeReporter"
-      }
-    }
   },
   "configSchema": {
     "showOnStartup": {
@@ -40,11 +35,10 @@
   "deserializers": {
     "WelcomeView": "createWelcomeView",
     "GuideView": "createGuideView",
-    "ConsentView": "createConsentView",
-    "SunsettingView": "createSunsettingView"
+    "ConsentView": "createConsentView"
   },
   "dependencies": {
-    "etch": "0.9.0"
+    "etch": "0.9.5"
   },
   "devDependencies": {
     "atom-mocha-test-runner": "^1.0.0",
