@@ -166,7 +166,7 @@
     "spell-check": "git+https://github.com/atom/spell-check.git#2807392",
     "status-bar": "git+https://github.com/atom/status-bar.git#8bac574",
     "styleguide": "git+https://github.com/atom/styleguide.git#ce7bb4c",
-    "superstring": "git+https://github.com/pulsar-edit/superstring.git#eb0cc09",
+    "superstring": "git+https://github.com/Alex313031/superstring-ng.git#31cb35b",
     "symbols-view": "git+https://github.com/atom/symbols-view.git#b39fb1d",
     "tabs": "git+https://github.com/atom/tabs.git#2d13bfe",
     "temp": "0.9.4",
