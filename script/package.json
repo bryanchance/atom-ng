@@ -1,7 +1,7 @@
 {
   "name": "atom-build-scripts",
   "description": "Atom-ng build scripts",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "dependencies": {
     "7zip-bin": "^4.1.0",
     "@atom/electron-winstaller": "0.0.1",
@@ -14,7 +14,7 @@
     "colors": "1.4.0",
     "donna": "1.0.16",
     "electron-chromedriver": "^12.0.0",
-    "electron-link": "git+https://github.com/Alex313031/electron-link-ng.git#995ffdf",
+    "electron-link": "git+https://github.com/Alex313031/electron-link-ng.git#3f43501",
     "electron-mksnapshot": "^12.0.0",
     "electron-packager": "^15.5.2",
     "eslint": "^5.16.0",
