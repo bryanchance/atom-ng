@@ -23,3 +23,5 @@ out/
 /apm/node_modules/
 /packages/git-diff/node_modules/
 /packages/grammar-selector/node_modules/
+/script/update-server/node_modules/
+/script/vsts/node_modules/
