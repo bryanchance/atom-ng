@@ -14,7 +14,7 @@ module.exports = function(packagedAppPath) {
   if (process.platform === 'darwin') {
     const symbolsArchivePath = path.join(
       CONFIG.buildOutputPath,
-      'atom-mac-symbols.zip'
+      'atom-ng-mac-symbols.zip'
     );
     compress(CONFIG.symbolsPath, symbolsArchivePath);
   }
@@ -23,11 +23,11 @@ module.exports = function(packagedAppPath) {
 function getArchiveName() {
   switch (process.platform) {
     case 'darwin':
-      return 'atom-mac.zip';
+      return 'atom-ng-mac.zip';
     case 'win32':
-      return `atom-${process.arch === 'x64' ? 'x64-' : ''}windows.zip`;
+      return `atom-ng-${process.arch === 'x64' ? 'x64-' : ''}windows.zip`;
     default:
-      return `atom-${getLinuxArchiveArch()}.tar.gz`;
+      return `atom-ng-${getLinuxArchiveArch()}.tar.gz`;
   }
 }
 

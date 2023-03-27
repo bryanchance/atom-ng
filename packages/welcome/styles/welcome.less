@@ -1,5 +1,6 @@
 @import "octicon-mixins";
 @import "ui-variables";
+@import "variables";
 
 .welcome {
   display: flex;
@@ -37,7 +38,7 @@
 
   &-container {
     width: 100%;
-    max-width: 580px;
+    max-width: 600px;
     min-width: 300px;
     margin: auto;
     padding: 3em 2em;
@@ -53,6 +54,21 @@
     max-width: auto;
     margin: 0 auto 2em auto;
     color: @text-color-highlight;
+    transition: color 0.2s;
+  }
+
+  &-banner {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 2em auto;
+    color: @text-color-highlight;
+  }
+
+  .welcome-header:hover {
+    .welcome-logo {
+      color: @atom-green;
+    }
   }
 
   &-title {

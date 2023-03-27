@@ -1,0 +1,12 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Yiff'
+      'submenu': [
+        { 'label': 'Show Yiff View', 'command': 'yiff:show' }
+      ]
+    ]
+  }
+]

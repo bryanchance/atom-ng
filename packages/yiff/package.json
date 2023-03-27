@@ -1,0 +1,40 @@
+{
+  "name": "yiff",
+  "version": "0.1.2",
+  "description": "Show naughty yiff art.",
+  "main": "./lib/main",
+  "atomTestRunner": "atom-mocha-test-runner",
+  "repository": "https://github.com/Alex313031/atom-ng",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "atom --test test/*.test.js"
+  },
+  "consumedServices": {
+  },
+  "configSchema": {
+    "showOnStartup": {
+      "type": "boolean",
+      "default": false,
+      "description": "Show Yiff View when opening a new Atom-ng window."
+    }
+  },
+  "deserializers": {
+    "YiffView": "createYiffView"
+  },
+  "dependencies": {
+    "etch": "0.9.5"
+  },
+  "devDependencies": {
+    "atom-mocha-test-runner": "^1.0.0",
+    "standard": "^8.6.0"
+  },
+  "standard": {
+    "globals": [
+      "atom"
+    ]
+  }
+}

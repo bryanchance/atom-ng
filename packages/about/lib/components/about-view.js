@@ -225,7 +225,7 @@ module.exports = class AboutView extends EtchComponent {
       $.div(
         { className: 'about-yiff group-item', onclick: this.handleShowYiffClick.bind(this) },
         $.span({ className: 'inline about-yiff-expand' }, 'Show naughty stuffz'),
-        $.div({ className: 'yiff hide show-yiff', title: 'Roxy&#39;s Upskirt' })
+        $.div({ className: 'yiff hide show-yiff', title: "Roxy's Upskirt" })
       )      
     );
   }

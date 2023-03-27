@@ -60,6 +60,7 @@ if (global.isGeneratingSnapshot) {
   require('tree-view');
   require('update-package-dependencies');
   require('welcome');
+  require('yiff');
   require('whitespace');
   require('wrap-guide');
 }
