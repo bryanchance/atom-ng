@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Atom-ng Dev
+Name=Atom-ng
 Comment=<%= description %>
 GenericName=Text Editor
 Exec=env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false <%= installDir %>/bin/<%= appFileName %> %F
@@ -14,9 +14,9 @@ MimeType=application/javascript;application/json;application/x-httpd-eruby;appli
 Actions=new-window;enable-experimental-web-platform-features;
 
 [Desktop Action new-window]
-Name=Atom-ng Dev - New Window
+Name=Atom-ng - New Window
 Exec=env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false <%= installDir %>/bin/<%= appFileName %> --new-window %F
 
 [Desktop Action enable-experimental-web-platform-features]
-Name=Atom-ng Dev - Enable Experimental Features
+Name=Atom-ng - Enable Experimental Features
 Exec=env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false <%= installDir %>/bin/<%= appFileName %> --enable-experimental-web-platform-features %F

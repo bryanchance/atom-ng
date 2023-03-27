@@ -217,13 +217,17 @@ module.exports = class AboutView extends EtchComponent {
       ),
 
       $.div(
-        { className: 'about-credits group-item' },
+        { className: 'about-credits group-item group-item-end' },
         $.span({ className: 'inline' }, 'And with care by '),
-        $.a({ className: 'icon icon-logo-github', title: 'GitHub Homepage', href: 'https://github.com' })
+        $.a(
+          { className: 'author', title: 'GitHub' },
+          { href: 'https://github.com/Alex313031/' },
+          'GitHub'
+        )
       ),
 
       $.div(
-        { className: 'about-yiff group-item', onclick: this.handleShowYiffClick.bind(this) },
+        { className: 'about-yiff group-item-yiff', onclick: this.handleShowYiffClick.bind(this) },
         $.span({ className: 'inline about-yiff-expand' }, 'Show naughty stuffz'),
         $.div({ className: 'yiff hide show-yiff', title: "Roxy's Upskirt" })
       )      

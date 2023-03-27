@@ -7,6 +7,7 @@ Thumbs.db
 .svn
 .nvm-version
 .vscode
+node_modules
 .python-version
 *.log
 /tags
@@ -21,6 +22,7 @@ out/
 /node_modules/
 /script/node_modules/
 /apm/node_modules/
+/packages/atom-material-ui/node_modules/
 /packages/git-diff/node_modules/
 /packages/grammar-selector/node_modules/
 /script/update-server/node_modules/
