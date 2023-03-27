@@ -29,7 +29,7 @@ module.exports = function(packagedAppPath) {
 
   const outputDebianPackageFilePath = path.join(
     CONFIG.buildOutputPath,
-    `atom-ng-${arch}.deb`
+    `atom-ng-${CONFIG.appMetadata.version}-${arch}.deb`
   );
   const debianPackageDirPath = path.join(
     os.tmpdir(),
