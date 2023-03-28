@@ -27,6 +27,6 @@ out/
 /packages/grammar-selector/node_modules/
 /script/update-server/node_modules/
 /script/vsts/node_modules/
-/dot-atom/packages/color-picker-2.3.0/node_modules/
-/dot-atom/packages/linter-3.4.0/node_modules/
-/dot-atom/packages/minimap-4.40.1/node_modules/
+/dot-atom/packages/color-picker/node_modules/
+/dot-atom/packages/linter/node_modules/
+/dot-atom/packages/minimap/node_modules/
