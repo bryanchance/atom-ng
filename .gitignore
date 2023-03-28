@@ -9,6 +9,8 @@ Thumbs.db
 .vscode
 node_modules
 .python-version
+.rollup.cache/
+.parcel-cache/
 *.log
 /tags
 /atom-shell/
@@ -27,6 +29,3 @@ out/
 /packages/grammar-selector/node_modules/
 /script/update-server/node_modules/
 /script/vsts/node_modules/
-/dot-atom/packages/color-picker/node_modules/
-/dot-atom/packages/linter/node_modules/
-/dot-atom/packages/minimap/node_modules/

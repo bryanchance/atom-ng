@@ -56,12 +56,14 @@ export CFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno
 export CXXFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type" &&
 export CPPFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type" &&
 export LDFLAGS="-Wl,-O3 -mavx -maes -s" &&
+export VERBOSE=1 &&
+export V=1 &&
 
 # Use upstream electron
 # export ATOM_ELECTRON_URL='https://artifacts.electronjs.org/headers/dist' &&
 
 printf "\n" &&
-printf "${bold}${GRE} Bootstrapping with \`npm install\`...${c0}\n" &&
+printf "${bold}${GRE} Bootstrapping with \`script/bootstrap\`...${c0}\n" &&
 printf "\n" &&
 
 # Workaround for jasmine
@@ -80,6 +82,8 @@ export CFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno
 export CXXFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type" &&
 export CPPFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type" &&
 export LDFLAGS="-Wl,-O3 -mavx -maes -s" &&
+export VERBOSE=1 &&
+export V=1 &&
 
 # Use upstream electron
 # export ATOM_ELECTRON_URL='https://artifacts.electronjs.org/headers/dist' &&
@@ -110,6 +114,8 @@ export CFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno
 export CXXFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type" &&
 export CPPFLAGS="-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type" &&
 export LDFLAGS="-Wl,-O3 -mavx -maes -s" &&
+export VERBOSE=1 &&
+export V=1 &&
 
 # Use upstream electron
 # export ATOM_ELECTRON_URL='https://artifacts.electronjs.org/headers/dist' &&

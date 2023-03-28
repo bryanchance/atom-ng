@@ -33,7 +33,7 @@ module.exports = function parseCommandLine(processArgs) {
     Environment Variables:
 
       ATOM_DEV_RESOURCE_PATH  The path from which Atom-ng loads source code in dev mode.
-                              Defaults to \`~/github/atom\`.
+                              Defaults to \`~/alex313031/atom-ng\`.
 
       ATOM_HOME               The root path for all configuration files and folders.
                               Defaults to \`~/.atom\`.`
