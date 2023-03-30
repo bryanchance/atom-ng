@@ -6,6 +6,4 @@ set LDFLAGS=-Wl,-O3 -mavx -maes -s &
 mkdir %USERPROFILE%\.atom\.node-gyp &
 copy gitconfig %USERPROFILE%\.atom\.node-gyp\.gitconfig &
 
-set NODE_ENV=production &
-
-script\build.cmd --compress-artifacts --create-windows-installer
+script\bootstrap.cmd
