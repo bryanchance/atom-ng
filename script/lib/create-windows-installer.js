@@ -28,7 +28,7 @@ module.exports = packagedAppPath => {
     ),
     outputDirectory: CONFIG.buildOutputPath,
     noMsi: true,
-    remoteReleases: `{https://github.com/Alex313031/atom-ng/blob/master/}`,
+    noDelta: true,
     setupExe: `AtomSetup${process.arch === 'x64' ? '-x64' : ''}.exe`,
     setupIcon: path.join(
       CONFIG.repositoryRootPath,
