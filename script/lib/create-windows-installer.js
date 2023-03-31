@@ -29,7 +29,7 @@ module.exports = packagedAppPath => {
     outputDirectory: CONFIG.buildOutputPath,
     noMsi: true,
     noDelta: true,
-    setupExe: `AtomSetup${process.arch === 'x64' ? '-x64' : ''}.exe`,
+    setupExe: `Atom-ng_${CONFIG.appMetadata.version}_Setup${process.arch === 'x64' ? '-x64' : ''}.exe`,
     setupIcon: path.join(
       CONFIG.repositoryRootPath,
       'resources',
@@ -46,7 +46,7 @@ module.exports = packagedAppPath => {
     }
 
     let appName =
-      CONFIG.channel === 'stable' ? 'atom' : `atom-${CONFIG.channel}`;
+      CONFIG.channel === 'stable' ? 'atom-ng' : `atom-ng-${CONFIG.channel}`;
     for (let nupkgPath of glob.sync(
       `${CONFIG.buildOutputPath}/${appName}-*.nupkg`
     )) {
