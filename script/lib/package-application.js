@@ -32,8 +32,8 @@ module.exports = function() {
     buildVersion: CONFIG.appMetadata.version,
     derefSymlinks: false,
     download: { quiet: false, disableChecksumSafetyCheck: true, unsafelyDisableChecksums: true, autoDownload: false, mirrorOptions: 
-		{ mirror: 'https://github.com/Alex313031/electron-12.2.3/releases/download/' }
-	},
+        { mirror: 'https://github.com/Alex313031/electron-12.2.3/releases/download/' }
+    },
     quiet: false,
     disableChecksumSafetyCheck: true,
     unsafelyDisableChecksums: true,
