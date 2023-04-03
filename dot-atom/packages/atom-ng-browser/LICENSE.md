@@ -1,5 +1,4 @@
-Copyright (c) 2022-2023 Alex313031.
-Copyright (c) 2011-2022 GitHub Inc.
+Copyright (c) 2017 <Your name here>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

@@ -1,15 +1,15 @@
 {
   "name": "atom-bundled-apm",
   "description": "Atom-ng's bundled apm",
-  "version": "2.6.8",
+  "version": "2.6.9",
   "repository": {
     "type": "git",
     "url": "https://github.com/Alex313031/apm-ng"
   },
   "dependencies": {
-    "atom-package-manager": "git+https://github.com/Alex313031/apm-ng.git#69f9f60"
+    "atom-package-manager": "git+https://github.com/Alex313031/apm-ng.git#6e0cd14"
   },
   "packageDependencies": {
-    "atom-package-manager": "2.6.8"
+    "atom-package-manager": "2.6.9"
   }
 }

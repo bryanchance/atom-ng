@@ -86,6 +86,12 @@ module.exports = function parseCommandLine(processArgs) {
       'Do not load packages from ~/.atom/packages or ~/.atom/dev/packages.'
     );
   options
+    .boolean('fps')
+    .describe(
+      'fps',
+      'Show a FPS counter via Chromium APIs.'
+    );
+  options
     .boolean('benchmark')
     .describe(
       'benchmark',
@@ -156,6 +162,7 @@ module.exports = function parseCommandLine(processArgs) {
 
   const addToLastWindow = args['add'];
   const safeMode = args['safe'];
+  const fpsCounter = args['fps'];
   const benchmark = args['benchmark'];
   const benchmarkTest = args['benchmark-test'];
   const test = args['test'];
@@ -224,6 +231,7 @@ module.exports = function parseCommandLine(processArgs) {
     pidToKillWhenClosed,
     devMode,
     safeMode,
+    fpsCounter,
     newWindow,
     logFile,
     userDataDir,

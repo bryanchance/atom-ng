@@ -37,14 +37,43 @@ module.exports = function start(resourcePath, devResourcePath, startTime) {
   });
 
   // TodoElectronIssue this should be set to true before Electron 12 - https://github.com/electron/electron/issues/18397
+  // WontFix: Atom-ng still needs this when using Electron 12.2.3
   app.allowRendererProcessReuse = false;
 
+  // Electron 12 crashes without disabling the sandbox
   app.commandLine.appendSwitch('no-sandbox');
+  // Enable experimental web features
   app.commandLine.appendSwitch('enable-experimental-web-platform-features');
+  // Including new Canvas2D APIs
   app.commandLine.appendSwitch('new-canvas-2d-api');
+  // These two allow easier local web development
+    // Allow file:// URIs to read other file:// URIs
+  app.commandLine.appendSwitch('allow-file-access-from-files');
+    // Enable local DOM to access all resources in a tree
+  app.commandLine.appendSwitch('enable-local-file-accesses');
+  // Enable QUIC for faster handshakes
+  app.commandLine.appendSwitch('enable-quic');
+  // Enable inspecting ALL layers
+  app.commandLine.appendSwitch('enable-ui-devtools');
+  // Force enable GPU acceleration
   app.commandLine.appendSwitch('ignore-gpu-blocklist');
+  // Force enable GPU rasterization
+  app.commandLine.appendSwitch('enable-gpu-rasterization');
+  // Enable OOP Rasterization for Canvas layers
+  app.commandLine.appendSwitch('enable-features', 'CanvasOopRasterization');
+  
+  if (process.platform == 'linux') {
+    // Use VAAPI on Linux
+    app.commandLine.appendSwitch('enable-features', 'VaapiVideoDecoder');
+  }
 
+  // Export command line arguments
   const args = parseCommandLine(process.argv.slice(1));
+
+  if (args.fpsCounter) {
+    // Show a heads up display with FPS Counter and GPU Mem usage.
+    app.commandLine.appendSwitch('show-fps-counter');
+  }
 
   // This must happen after parseCommandLine() because yargs uses console.log
   // to display the usage message.

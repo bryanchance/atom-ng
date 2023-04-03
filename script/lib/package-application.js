@@ -19,7 +19,7 @@ require('colors');
 module.exports = function() {
   const appName = getAppName();
   console.log(
-    `Running electron-packager on ${
+    `Running electron-packager in ${
       CONFIG.intermediateAppPath
     } with app name "${appName}"`.green
   );
@@ -31,13 +31,14 @@ module.exports = function() {
     asar: { unpack: buildAsarUnpackGlobExpression() },
     buildVersion: CONFIG.appMetadata.version,
     derefSymlinks: false,
-    download: { quiet: false, disableChecksumSafetyCheck: true, unsafelyDisableChecksums: true, autoDownload: false, mirrorOptions: 
+    download: { quiet: false, disableChecksumSafetyCheck: true, unsafelyDisableChecksums: true, autoDownload: false, cacheRoot: CONFIG.electronDownloadPath, mirrorOptions: 
         { mirror: 'https://github.com/Alex313031/electron-12.2.3/releases/download/' }
     },
     quiet: false,
     disableChecksumSafetyCheck: true,
     unsafelyDisableChecksums: true,
     autoDownload: false,
+    cacheRoot: CONFIG.electronDownloadPath,
     dir: CONFIG.intermediateAppPath,
     electronVersion: CONFIG.appMetadata.electronVersion,
     extendInfo: path.join(
@@ -138,6 +139,23 @@ function copyNonASARResources(packagedAppPath, bundledResourcesPath) {
       ),
       path.join(packagedAppPath, 'atom-ng.png')
     );
+    // Add portable executable and readme
+    fs.copySync(
+      path.join(
+        CONFIG.repositoryRootPath,
+        'portable',
+        'RUN'
+      ),
+      path.join(packagedAppPath, 'ATOM-NG_PORTABLE')
+    );
+    fs.copySync(
+      path.join(
+        CONFIG.repositoryRootPath,
+        'portable',
+        'README.txt'
+      ),
+      path.join(packagedAppPath, 'README.md')
+    );
   } else if (process.platform === 'win32') {
     [
       'atom.sh',
@@ -151,6 +169,23 @@ function copyNonASARResources(packagedAppPath, bundledResourcesPath) {
         path.join(CONFIG.repositoryRootPath, 'resources', 'win', file),
         path.join(bundledResourcesPath, 'cli', file)
       )
+    );
+    // Add portable bat and readme
+    fs.copySync(
+      path.join(
+        CONFIG.repositoryRootPath,
+        'portable',
+        'RUN.bat'
+      ),
+      path.join(packagedAppPath, 'ATOM-NG_PORTABLE.bat')
+    );
+    fs.copySync(
+      path.join(
+        CONFIG.repositoryRootPath,
+        'portable',
+        'README.txt'
+      ),
+      path.join(packagedAppPath, 'README.md')
     );
 
     // Customize atom.cmd for the channel-specific atom.exe name (e.g. atom-beta.exe)

@@ -15,6 +15,9 @@ yell() { echo "$0: $*" >&2; }
 die() { yell "$*"; exit 111; }
 try() { "$@" || die "${RED}Failed $*"; }
 
+export ELECTRON_CACHE="${PWD}/electron" &&
+export electron_config_cache="${PWD}/electron" &&
+
 # --help
 displayHelp () {
 	printf "\n" &&
@@ -62,6 +65,10 @@ export V=1 &&
 # Use upstream electron
 # export ATOM_ELECTRON_URL='https://artifacts.electronjs.org/headers/dist' &&
 
+# Put electron binaries here
+export ELECTRON_CACHE="${PWD}/electron" &&
+export electron_config_cache="${PWD}/electron" &&
+
 printf "\n" &&
 printf "${bold}${GRE} Bootstrapping with \`script/bootstrap\`...${c0}\n" &&
 printf "\n" &&
@@ -87,6 +94,10 @@ export V=1 &&
 
 # Use upstream electron
 # export ATOM_ELECTRON_URL='https://artifacts.electronjs.org/headers/dist' &&
+
+# Put electron binaries here
+export ELECTRON_CACHE="${PWD}/electron" &&
+export electron_config_cache="${PWD}/electron" &&
 
 printf "\n" &&
 printf "${bold}${GRE} Building Atom-ng for Linux...${c0}\n" &&
@@ -119,6 +130,10 @@ export V=1 &&
 
 # Use upstream electron
 # export ATOM_ELECTRON_URL='https://artifacts.electronjs.org/headers/dist' &&
+
+# Put electron binaries here
+export ELECTRON_CACHE="${PWD}/electron" &&
+export electron_config_cache="${PWD}/electron" &&
 
 printf "\n" &&
 printf "${bold}${GRE} Generating installation packages...${c0}\n" &&

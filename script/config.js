@@ -54,13 +54,13 @@ module.exports = {
   docsOutputPath,
   intermediateAppPath,
   symbolsPath,
+  electronBinDir,
   electronDownloadPath,
   atomHomeDirPath,
   homeDirPath,
   getApmBinPath,
   getNpmBinPath,
   getLocalNpmBinPath,
-  electronBinDir,
   snapshotAuxiliaryData: {}
 };
 
