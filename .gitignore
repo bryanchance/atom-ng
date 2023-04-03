@@ -20,7 +20,6 @@ docs/includes
 spec/fixtures/evil-files/
 !spec/fixtures/packages/package-with-incompatible-native-module-loaded-conditionally/node_modules/
 out/
-/electron/
 /node_modules/
 /script/node_modules/
 /apm/node_modules/

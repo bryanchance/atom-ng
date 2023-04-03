@@ -21,17 +21,23 @@ module.exports = function() {
   console.log(
     `Running electron-packager on ${
       CONFIG.intermediateAppPath
-    } with app name "${appName}"`
+    } with app name "${appName}"`.green
   );
   return runPackager({
-    appBundleId: 'com.github.atom',
+    appBundleId: 'com.alex313031.atom',
     appCopyright: `Copyright © 2014-${new Date().getFullYear()} GitHub, Inc. & Alex313031 All rights reserved.`,
     appVersion: CONFIG.appMetadata.version,
     arch: process.platform === 'darwin' ? 'x64' : HOST_ARCH, // OS X is 64-bit only
     asar: { unpack: buildAsarUnpackGlobExpression() },
     buildVersion: CONFIG.appMetadata.version,
     derefSymlinks: false,
-    download: { cache: CONFIG.electronDownloadPath },
+    download: { quiet: false, disableChecksumSafetyCheck: true, unsafelyDisableChecksums: true, autoDownload: false, mirrorOptions: 
+		{ mirror: 'https://github.com/Alex313031/electron-12.2.3/releases/download/' }
+	},
+    quiet: false,
+    disableChecksumSafetyCheck: true,
+    unsafelyDisableChecksums: true,
+    autoDownload: false,
     dir: CONFIG.intermediateAppPath,
     electronVersion: CONFIG.appMetadata.electronVersion,
     extendInfo: path.join(
@@ -40,7 +46,7 @@ module.exports = function() {
       'mac',
       'atom-Info.plist'
     ),
-    helperBundleId: 'com.github.atom.helper',
+    helperBundleId: 'com.alex313031.atom.helper',
     icon: path.join(
       CONFIG.repositoryRootPath,
       'resources',

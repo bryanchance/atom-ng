@@ -20,15 +20,15 @@ module.exports = function() {
   const mksnapshotActualVer = mksnapshotMetadataPath.version;
 
   // Always use caret on electron-chromedriver so that it can pick up the best minor/patch versions
-  if (!chromedriverVer.startsWith('^')) {
+  if (!chromedriverVer.startsWith('g')) {
     throw new Error(
-      `electron-chromedriver version in script/package.json should start with a caret to match latest patch version.`
+      `electron-chromedriver version in script/package.json should be 12.2.3.`
     );
   }
 
-  if (!mksnapshotVer.startsWith('^')) {
+  if (!mksnapshotVer.startsWith('g')) {
     throw new Error(
-      `electron-mksnapshot version in script/package.json should start with a caret to match latest patch version.`
+      `electron-mksnapshot version in script/package.json should be 12.2.3.`
     );
   }
 

@@ -128,7 +128,7 @@ if [ $OS == 'Mac' ]; then
       ATOM_PATH="$HOME/Applications"
     else
       # We haven't found an Atom.app, use spotlight to search for Atom
-      ATOM_PATH="$(mdfind "kMDItemCFBundleIdentifier == 'com.github.atom'" | grep -v ShipIt | head -1 | xargs -0 dirname)"
+      ATOM_PATH="$(mdfind "kMDItemCFBundleIdentifier == 'com.alex313031.atom'" | grep -v ShipIt | head -1 | xargs -0 dirname)"
 
       # Exit if Atom can't be found
       if [ ! -x "$ATOM_PATH/$ATOM_APP_NAME" ]; then
