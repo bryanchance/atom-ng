@@ -4,7 +4,7 @@
   "appName": "atom-ng",
   "productName": "Atom-ng",
   "version": "1.66.8",
-  "description": "A hackable text editor for the 21st Century.",
+  "description": "A hyper-hackable text editor for the 21st Century.",
   "main": "./src/main-process/main.js",
   "branding": {
     "id": "atom-ng",

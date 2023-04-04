@@ -3,7 +3,7 @@ Active=true
 Name=Open in Atom-ng
 Comment=Open in Atom-ng
 #%U is the current selected file, this will also work on current directory
-Exec=atom-dev -n %U
-Icon-Name=atom-dev
+Exec=atom-ng -n %U
+Icon-Name=atom-ng
 Selection=any
 Extensions=any
