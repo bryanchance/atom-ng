@@ -71,18 +71,18 @@ module.exports = class AboutView extends EtchComponent {
     }
   }
 
-  handleShowYiffClick(e) {
+  handleShowOctocatClick(e) {
     e.preventDefault();
-    var showYiffDiv = document.querySelector('.show-yiff');
-    var showYiffText = document.querySelector('.about-yiff-expand');
-    switch (showYiffText.textContent) {
-      case 'Show naughty stuffz':
-        showYiffDiv.classList.toggle('hide');
-        showYiffText.textContent = 'Hide naughty stuffz';
+    var showOctocatDiv = document.querySelector('.show-octocat');
+    var showOctocatText = document.querySelector('.about-octocat-expand');
+    switch (showOctocatText.textContent) {
+      case 'Show Octocat!':
+        showOctocatDiv.classList.toggle('hide');
+        showOctocatText.textContent = 'Hide naughty stuffz';
         break;
-      case 'Hide naughty stuffz':
-        showYiffDiv.classList.toggle('hide');
-        showYiffText.textContent = 'Show naughty stuffz';
+      case 'Hide Octocat':
+        showOctocatDiv.classList.toggle('hide');
+        showOctocatText.textContent = 'Show naughty stuffz';
         break;
     }
   }
@@ -227,9 +227,9 @@ module.exports = class AboutView extends EtchComponent {
       ),
 
       $.div(
-        { className: 'about-yiff group-item-yiff', onclick: this.handleShowYiffClick.bind(this) },
-        $.span({ className: 'inline about-yiff-expand' }, 'Show naughty stuffz'),
-        $.div({ className: 'yiff hide show-yiff', title: "Roxy's Upskirt" })
+        { className: 'about-octocat group-item-octocat', onclick: this.handleShowOctocatClick.bind(this) },
+        $.span({ className: 'inline about-octocat-expand' }, 'Show Octocat!'),
+        $.div({ className: 'octocat hide show-octocat', title: "Octocat in Space" })
       )      
     );
   }

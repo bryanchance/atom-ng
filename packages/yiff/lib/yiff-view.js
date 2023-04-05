@@ -39,7 +39,8 @@ export default class YiffView {
               <h1 className="yiff-title">
                 Naughty Stuffz
               </h1>
-              <img class="yiff-logo" title="Kody's Ass Inspection" src="atom://yiff/assets/Roxy_Inspection.png"></img>
+              <img class="yiff-logo" title="Kody's Ass Inspection" src="atom://yiff/assets/Kody_Inspection.png"></img>
+              <img class="yiff-logo" title="Roxy's Upskirt" src="atom://yiff/assets/Roxy_Upskirt.jpg"></img>
               <img class="yiff-logo" title="Ass Shaking" src="atom://yiff/assets/Ass_Shaking.gif"></img>
               <img class="yiff-logo" title="Bunny Butt" src="atom://yiff/assets/Bunny_Butt.jpg"></img>
           </header>

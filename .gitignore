@@ -15,7 +15,9 @@ node_modules
 /tags
 /atom-shell/
 /out/
-/electron/
+/electron/eab1f78c87b7d1ac45e4573c23f9cef882b949b90fd082e33957144409d9bc9d/
+/electron/electron-v4.2.12-linux-x64.zip
+/electron/SHASUMS256.txt-4.2.12
 docs/output
 docs/includes
 spec/fixtures/evil-files/
