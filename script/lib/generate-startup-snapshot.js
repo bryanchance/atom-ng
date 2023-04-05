@@ -5,6 +5,8 @@ const electronLink = require('electron-link');
 const terser = require('terser');
 const CONFIG = require('../config');
 
+require('colors');
+
 module.exports = function(packagedAppPath) {
   const snapshotScriptPath = path.join(CONFIG.buildOutputPath, 'startup.js');
   const coreModules = new Set([
@@ -33,7 +35,7 @@ module.exports = function(packagedAppPath) {
         process.stdout.write('\r');
       }
       process.stdout.write(
-        `Generating snapshot script at "${snapshotScriptPath}" (${++processedFiles})`
+        `Generating snapshot script at "${snapshotScriptPath}" ` + `(${++processedFiles})`.green
       );
 
       const requiringModuleRelativePath = path.relative(
@@ -299,7 +301,7 @@ module.exports = function(packagedAppPath) {
       { env: Object.assign({}, process.env, { ELECTRON_RUN_AS_NODE: 1 }) }
     );
 
-    console.log('Generating startup blob with mksnapshot');
+    console.log('Generating startup blob with mksnapshot...');
     childProcess.spawnSync(process.execPath, [
       path.join(
         CONFIG.repositoryRootPath,

@@ -7,7 +7,7 @@
     "url": "https://github.com/Alex313031/apm-ng"
   },
   "dependencies": {
-    "atom-package-manager": "git+https://github.com/Alex313031/apm-ng.git#96ae482"
+    "atom-package-manager": "git+https://github.com/Alex313031/apm-ng.git#8fea185"
   },
   "packageDependencies": {
     "atom-package-manager": "2.6.9"
