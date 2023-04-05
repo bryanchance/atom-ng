@@ -45,7 +45,6 @@ esac
 cleanAtom () {
 	printf "\n" &&
 	printf "${bold}${YEL} Cleaning artifacts and build directory...${c0}\n" &&
-	printf "\n" &&
 	
 	npm run clean
 }

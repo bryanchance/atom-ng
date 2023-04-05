@@ -134,7 +134,7 @@ function verifyPython() {
       path.join(process.env.SystemDrive || 'C:', 'Python27', 'python.exe')
     );
     verifyBinary(
-      path.join(process.env.SystemDrive || 'C:', 'Python37', 'python.exe')
+      path.join(process.env.SystemDrive || 'C:', 'Python39', 'python.exe')
     );
   }
 
