@@ -36,12 +36,23 @@ export LDFLAGS="-Wl,-O3 -mavx -maes -s" &&
 export VERBOSE=1 &&
 export V=1 &&
 
-# Put electron binaries here
+# Set msvs_version for node-gyp on Windows
+export MSVS_VERSION="2017" &&
+export GYP_MSVS_VERSION="2017" &&
+# Download electron binaries here
 export ELECTRON_CACHE="${PWD}/electron/bin" &&
 export electron_config_cache="${PWD}/electron/bin" &&
 
 printf "\n" &&
 printf "${bold}${GRE} Bootstrapping \`dot-atom/packages\` with \`npm install\`...${c0}\n" &&
+printf "\n" &&
+
+# Workaround for git:// URLs
+if [ -e ~/.gitconfig ]
+  then
+  cp -i -v ~/.gitconfig ~/.gitconfig_bak
+fi
+cp -v ./gitconfig ~/.gitconfig &&
 printf "\n" &&
 
 cd ./dot-atom/packages &&
@@ -50,6 +61,14 @@ npm install && cd .. &&
 cd color-picker &&
 npm install && cd .. &&
 cd minimap &&
-npm install && npm run build && npm run build-commit && cd .. &&
-cd ..
+npm install && npm run build && npm run build-commit && cd .. && cd .. &&
+cd .. &&
+
+printf "\n" &&
+rm -v ~/.gitconfig &&
+if [ -e ~/.gitconfig_bak ]
+  then
+  mv -i -v ~/.gitconfig_bak ~/.gitconfig
+fi
+printf "\n"
 exit 0
