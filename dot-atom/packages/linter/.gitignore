@@ -1,7 +1,0 @@
-.DS_Store
-npm-debug.log
-node_modules
-.idea
-spec/fixtures/ignored.txt
-lib/types/linter-ui-default
-.rollup.cache/
