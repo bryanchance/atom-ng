@@ -1,2 +1,2 @@
-set ATOM_HOME="%~dp0%\.atom" &
-START "" "%cd%\atom-ng"
+set ATOM_HOME=.atom
+atom-ng.exe
