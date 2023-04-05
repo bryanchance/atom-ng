@@ -16,7 +16,7 @@ node_modules
 /atom-shell/
 /out/
 /electron/bin/
-
+/dot-atom/packages/minimap/dist/
 docs/output
 docs/includes
 spec/fixtures/evil-files/
