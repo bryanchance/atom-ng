@@ -1,0 +1,3 @@
+echo Cleaning Atom-ng...
+
+npm run clean
