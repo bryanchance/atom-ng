@@ -35,7 +35,7 @@ module.exports = function(packagedAppPath) {
         process.stdout.write('\r');
       }
       process.stdout.write(
-        `Generating snapshot script at "${snapshotScriptPath}" ` + `(${++processedFiles})`.green
+        `Generating snapshot script at "${snapshotScriptPath}" ` + `(${++processedFiles}) `.bold
       );
 
       const requiringModuleRelativePath = path.relative(
