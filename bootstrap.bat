@@ -6,4 +6,7 @@ set LDFLAGS=-Wl,-O3 -mavx -maes -s &
 mkdir %USERPROFILE%\.atom\.node-gyp &
 copy gitconfig %USERPROFILE%\.atom\.node-gyp\.gitconfig &
 
+set ELECTRON_CACHE=%~dp0%\electron\bin &
+set electron_config_cache=%~dp0%\electron\bin &
+
 script\bootstrap.cmd

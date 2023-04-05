@@ -15,7 +15,7 @@ const buildOutputPath = path.join(repositoryRootPath, 'out');
 const docsOutputPath = path.join(repositoryRootPath, 'docs', 'output');
 const intermediateAppPath = path.join(buildOutputPath, 'app');
 const symbolsPath = path.join(buildOutputPath, 'symbols');
-const electronDownloadPath = path.join(repositoryRootPath, 'electron');
+const electronDownloadPath = path.join(repositoryRootPath, 'electron', 'bin');
 const homeDirPath = process.env.HOME || process.env.USERPROFILE;
 const atomHomeDirPath =
   process.env.ATOM_HOME || path.join(homeDirPath, '.atom');
