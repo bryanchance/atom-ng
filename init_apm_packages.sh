@@ -49,8 +49,6 @@ cd atom-ng-browser &&
 npm install && cd .. &&
 cd color-picker &&
 npm install && cd .. &&
-cd linter &&
-npm install && npm run build && npm run build-commit && cd .. &&
 cd minimap &&
 npm install && npm run build && npm run build-commit && cd .. &&
 cd ..
