@@ -15,8 +15,8 @@ yell() { echo "$0: $*" >&2; }
 die() { yell "$*"; exit 111; }
 try() { "$@" || die "${RED}Failed $*"; }
 
-export ELECTRON_CACHE="${PWD}/electron" &&
-export electron_config_cache="${PWD}/electron" &&
+export ELECTRON_CACHE="${PWD}/electron/bin" &&
+export electron_config_cache="${PWD}/electron/bin" &&
 
 # --help
 displayHelp () {
@@ -37,11 +37,11 @@ export VERBOSE=1 &&
 export V=1 &&
 
 # Put electron binaries here
-export ELECTRON_CACHE="${PWD}/electron" &&
-export electron_config_cache="${PWD}/electron" &&
+export ELECTRON_CACHE="${PWD}/electron/bin" &&
+export electron_config_cache="${PWD}/electron/bin" &&
 
 printf "\n" &&
-printf "${bold}${GRE} Bootstrapping packages with \`npm install\`...${c0}\n" &&
+printf "${bold}${GRE} Bootstrapping \`dot-atom/packages\` with \`npm install\`...${c0}\n" &&
 printf "\n" &&
 
 cd ./dot-atom/packages &&
