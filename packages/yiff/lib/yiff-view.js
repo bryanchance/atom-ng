@@ -1,6 +1,20 @@
 /** @babel */
 /** @jsx etch.dom **/
 
+          /** <footer className="yiff-footer">
+          <section className="yiff-panel">
+            <label>
+              <input
+                className="input-checkbox"
+                type="checkbox"
+                checked={atom.config.get('yiff.showOnStartup')}
+                onchange={this.didChangeShowOnStartup}
+              />
+              Show Yiff View when opening Atom-ng
+            </label>
+          </section>
+          </footer> **/
+
 import etch from 'etch';
 
 export default class YiffView {
@@ -39,15 +53,9 @@ export default class YiffView {
               <h1 className="yiff-title">
                 Naughty Stuffz
               </h1>
-              <img class="yiff-logo" title="Kody's Ass Inspection" src="atom://yiff/assets/Kody_Inspection.png"></img>
-              <img class="yiff-logo" title="Roxy's Upskirt" src="atom://yiff/assets/Roxy_Upskirt.jpg"></img>
-              <img class="yiff-logo" title="Ass Shaking" src="atom://yiff/assets/Ass_Shaking.gif"></img>
-              <img class="yiff-logo" title="Bunny Butt" src="atom://yiff/assets/Bunny_Butt.jpg"></img>
-          </header>
-        
-          <footer className="yiff-footer">
-          <section className="welcome-panel">
-            <label>
+          <div className="yiff-option">
+          <section className="yiff-panel">
+            <label className="label2">
               <input
                 className="input-checkbox"
                 type="checkbox"
@@ -57,7 +65,13 @@ export default class YiffView {
               Show Yiff View when opening Atom-ng
             </label>
           </section>
-          </footer>
+          </div>
+              <img class="yiff-logo" title="Kody's Ass Inspection" href="atom://yiff/assets/Kody_Inspection.png" src="atom://yiff/assets/Kody_Inspection.png"></img>
+              <img class="yiff-logo" title="Roxy's Upskirt" src="atom://yiff/assets/Roxy_Upskirt.jpg"></img>
+              <img class="yiff-logo" title="Ass Shaking" src="atom://yiff/assets/Ass_Shaking.gif"></img>
+              <img class="yiff-logo" title="Bent Over Maid" src="atom://yiff/assets/Maid_Bend_Over.png"></img>
+              <img class="yiff-logo" title="Bunny Butt" src="atom://yiff/assets/Bunny_Butt.jpg"></img>
+          </header>
         </div>
       </div>
     );
@@ -74,4 +88,8 @@ export default class YiffView {
   isEqual(other) {
     return other instanceof YiffView;
   }
-}
+
+  getIconName() {
+    return 'star';
+  }
+};

@@ -20,14 +20,18 @@
     cursor: default;
   }
 
+  a {
+    // Underline all links
+    text-decoration: underline;
+  }
+
   a:focus {
     // Don't use Bootstrap default here
     color: inherit;
   }
 
-  a {
-    // Underline all links
-    text-decoration: underline;
+  a:active {
+    color: lighten(@text-color, 30%);
   }
 
   img, a {
@@ -63,7 +67,7 @@
 
 .about-atom-io:hover {
   .about-logo {
-    color: @atom-green;
+    color: @atom-purple;
   }
 }
 
@@ -94,6 +98,9 @@
 .about-more-version {
   color: @text-color-subtle;
   font-size: .9em;
+  &:hover {
+    color: lighten(@text-color-subtle, 15%);
+  }
 }
 
 .about-header-release-notes {
@@ -131,6 +138,7 @@
 
 .about-updates-label {
   color: @text-color-subtle;
+  margin-right: -1em;
   &.is-strong {
     color: @text-color;
   }
@@ -156,6 +164,7 @@
 // Love --------------------------------
 
 .about-love {
+  color: @text-color;
   .icon::before {
     // Make these octicons look good inlined with text
     position: relative;
@@ -169,6 +178,10 @@
   .icon-logo-github::before {
     font-size: 3.6em;
     height: .36em;
+  }
+
+  &:hover {
+    color: lighten(@text-color, 15%);
   }
 
   .author {
@@ -191,6 +204,10 @@
   .icon-logo-github::before {
     font-size: 3.6em;
     height: .36em;
+  }
+
+  &:hover {
+    color: lighten(@text-color-subtle, 15%);
   }
 
   .author {
@@ -221,10 +238,15 @@
     width: 450px;
     height: auto;
     display: block;
-    padding-top: 8px;
+    margin-top: 8px;
+    margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
-    content: url('atom://about/assets/Floating_Octocat.png');
+    border: 1px solid rgba(0, 0, 0, 0);
+    content: url('atom://about/assets/Floating_Octocat.svg');
+    &:active {
+      border: 1px solid @text-color-subtle;
+    }
   }
 }
 

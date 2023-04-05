@@ -78,11 +78,11 @@ module.exports = class AboutView extends EtchComponent {
     switch (showOctocatText.textContent) {
       case 'Show Octocat!':
         showOctocatDiv.classList.toggle('hide');
-        showOctocatText.textContent = 'Hide naughty stuffz';
+        showOctocatText.textContent = 'Hide Octocat';
         break;
       case 'Hide Octocat':
         showOctocatDiv.classList.toggle('hide');
-        showOctocatText.textContent = 'Show naughty stuffz';
+        showOctocatText.textContent = 'Show Octocat!';
         break;
     }
   }
@@ -95,7 +95,7 @@ module.exports = class AboutView extends EtchComponent {
         $.header(
           { className: 'about-header' },
           $.a(
-            { className: 'about-atom-io', title: 'Atom-ng Banner', href: 'https://thorium.rocks/atom-ng/' },
+            { className: 'about-atom-io', title: 'Atom-ng Banner (Click to go to Atom-ng\'s Homepage)', href: 'https://thorium.rocks/atom-ng/' },
             $(AtomLogo)
           ),
           $.div(
@@ -210,8 +210,7 @@ module.exports = class AboutView extends EtchComponent {
         $.span({ className: 'icon icon-heart' }),
         $.span({ className: 'inline' }, ' by '),
         $.a(
-          { className: 'author', title: 'Author' },
-          { href: 'https://github.com/Alex313031/' },
+          { className: 'author', title: 'Author', href: 'https://github.com/Alex313031/' },
           'Alex313031'
         )
       ),
@@ -220,15 +219,14 @@ module.exports = class AboutView extends EtchComponent {
         { className: 'about-credits group-item group-item-end' },
         $.span({ className: 'inline' }, 'And with care by '),
         $.a(
-          { className: 'author', title: 'GitHub' },
-          { href: 'https://github.com/Alex313031/' },
+          { className: 'author', title: 'GitHub', href: 'https://github.com/' },
           'GitHub'
         )
       ),
 
       $.div(
-        { className: 'about-octocat group-item-octocat', onclick: this.handleShowOctocatClick.bind(this) },
-        $.span({ className: 'inline about-octocat-expand' }, 'Show Octocat!'),
+        { className: 'about-octocat group-item-octocat' },
+        $.span({ className: 'inline about-octocat-expand', onclick: this.handleShowOctocatClick.bind(this) }, 'Show Octocat!'),
         $.div({ className: 'octocat hide show-octocat', title: "Octocat in Space" })
       )      
     );

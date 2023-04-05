@@ -3,7 +3,7 @@
   "author": "Alex313031 <https://github.com/Alex313031>",
   "appName": "atom-ng",
   "productName": "Atom-ng",
-  "version": "1.66.8",
+  "version": "1.66.9",
   "description": "A hyper-hackable text editor for the 21st Century.",
   "main": "./src/main-process/main.js",
   "branding": {
@@ -286,7 +286,7 @@
   },
   "private": true,
   "scripts": {
-    "preinstall": "node -e 'process.exit(0)'",
+    "preinstall": "node script/preinstall",
     "test": "node script/test",
     "bootstrap": "node script/bootstrap",
     "build": "node script/build",

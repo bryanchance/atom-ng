@@ -36,6 +36,7 @@ export default class WelcomeView {
       <div className="welcome">
         <div className="welcome-container">
           <header className="welcome-header">
+            <div title="Atom-ng Banner">
             <svg
                 className="welcome-logo"
                 width="330px"
@@ -86,6 +87,7 @@ export default class WelcomeView {
                   </g>
                 </g>
               </svg>
+              </div>
             <a href="https://thorium.rocks/atom-ng/">
               <h1 className="welcome-title">
                 A hyper-hackable text editor for the 21<sup>st</sup> Century
@@ -164,6 +166,10 @@ export default class WelcomeView {
 
   getTitle() {
     return 'Welcome!';
+  }
+
+  getIconName() {
+    return 'code';
   }
 
   isEqual(other) {

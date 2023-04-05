@@ -399,6 +399,10 @@ export default class GuideView {
     return this.props.uri;
   }
 
+  getIconName() {
+    return 'light-bulb';
+  }
+
   getTitle() {
     return 'Welcome Guide';
   }

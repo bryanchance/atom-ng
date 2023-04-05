@@ -1,5 +1,6 @@
 @import "octicon-mixins";
 @import "ui-variables";
+@import "variables";
 
 .yiff {
   display: flex;
@@ -28,6 +29,12 @@
     font-weight: normal;
   }
 
+  label.label2 {
+    margin-top: 0em;
+    margin-bottom: 0.8em;
+    font-weight: normal;
+  }
+
   .input-checkbox {
     margin-top: -.2em;
     margin-right: .5em;
@@ -51,8 +58,12 @@
     display: block;
     width: 100%;
     max-width: 100%;
-    margin: 0 auto 2em auto;
-    color: @text-color-highlight;
+    margin: 0 auto 1em auto;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+
+  &-logo:active, &-logo:hover {
+    border: 1px solid @atom-purple;
   }
 
   &-title {
@@ -60,7 +71,7 @@
     text-align: center;
     line-height: 1.3;
     margin-top: 0em;
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
   }
 
   &-panel {
@@ -188,6 +199,11 @@
     .icon::before {
       margin-right: 0;
     }
+  }
+
+  &-option {
+    margin-top: 0em;
+    text-align: center;
   }
 
   &-footer {

@@ -3,7 +3,7 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'Yiff'
+      'label': 'Yiff View'
       'submenu': [
         { 'label': 'Show Yiff View', 'command': 'yiff:show' }
       ]
