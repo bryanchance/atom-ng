@@ -61,7 +61,7 @@ npm install && cd .. &&
 cd color-picker &&
 npm install && cd .. &&
 cd minimap &&
-npm install && npm run build && npm run build-commit && cd .. && cd .. &&
+npm install && npm run build && cd .. && cd .. &&
 cd .. &&
 
 printf "\n" &&
