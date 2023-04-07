@@ -40,7 +40,7 @@ esac
 
 # Install prerequisites
 installDeps () {
-	sudo apt-get install build-essential git libsecret-1-dev fakeroot rpm libx11-dev libxkbfile-dev nodejs npm node-gyp node-istanbul python2.7-dev
+	sudo apt-get install build-essential fakeroot git libsecret-1-dev libx11-dev libxkbfile-dev node-gyp node-istanbul nodejs npm python2.7-dev rpm
 }
 case $1 in
 	--deps) installDeps; exit 0;;

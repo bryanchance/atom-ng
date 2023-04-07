@@ -1,6 +1,6 @@
 {
   "name": "welcome",
-  "version": "0.37.3",
+  "version": "0.37.4",
   "description": "Welcome users to Atom-ng with useful information",
   "main": "./lib/main",
   "atomTestRunner": "atom-mocha-test-runner",
