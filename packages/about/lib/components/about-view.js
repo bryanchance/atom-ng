@@ -51,7 +51,7 @@ module.exports = class AboutView extends EtchComponent {
   handleHowToUpdateClick(e) {
     e.preventDefault();
     shell.openExternal(
-      'https://web.archive.org/web/20221201143209/https://flight-manual.atom.io/getting-started/sections/installing-atom/'
+      'https://flight-manual-atom-io.github.io/getting-started/sections/installing-atom/'
     );
   }
 
@@ -227,7 +227,7 @@ module.exports = class AboutView extends EtchComponent {
       $.div(
         { className: 'about-octocat group-item-octocat' },
         $.span({ className: 'inline about-octocat-expand', onclick: this.handleShowOctocatClick.bind(this) }, 'Show Octocat!'),
-        $.div({ className: 'octocat hide show-octocat', title: "Octocat in Space" })
+        $.div({ className: 'octocat hide show-octocat', title: "Octocat" })
       )      
     );
   }
