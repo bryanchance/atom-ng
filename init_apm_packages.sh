@@ -61,8 +61,9 @@ npm install && cd .. &&
 cd color-picker &&
 npm install && cd .. &&
 cd minimap &&
-rm -r -f -v node_modules && npm install && npm run build && rm -r -f -v node_modules && NODE_ENV=production npm install &&
-cd .. && cd .. && cd .. &&
+rm -r -f -v node_modules && npm install && npm run build && rm -r -f -v node_modules && NODE_ENV=production npm install && cd .. &&
+cd markdown-preview-enhanced && NODE_ENV=production npm install && cd .. &&
+cd .. && cd .. &&
 
 printf "\n" &&
 rm -v ~/.gitconfig &&

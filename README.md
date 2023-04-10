@@ -18,7 +18,7 @@ By participating, you are expected to uphold this code. Please report unacceptab
 
 ## Documentation
 
-If you want to read about using Atom-ng or developing packages in Atom-ng, the [Atom Flight Manual](https://web.archive.org/web/20221201143209/https://flight-manual.atom.io) is free and available online. You can find the source to the manual in [atom/flight-manual.atom.io](https://github.com/atom/flight-manual.atom.io).
+If you want to read about using Atom-ng or developing packages in Atom-ng, the [Atom Flight Manual](https://flight-manual-atom-io.github.io) is free and available online. You can find the source to the manual in [atom/flight-manual-atom-io.github.io](https://github.com/atom/flight-manual-atom-io.github.io).
 
 The [API reference](https://web.archive.org/web/20221201134904/https://atom.io/docs/api) for developing packages is also documented on Atom.io.
 
@@ -48,7 +48,7 @@ Using [Chocolatey](https://chocolatey.org)? Run `cinst Atom` to install the late
 
 Atom-ng is only available for 64-bit Linux systems.
 
-Configure your distribution's package manager to install and update Atom-ng by following the [Linux installation instructions](https://web.archive.org/web/20221201143209/https://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux) in the Flight Manual.  You will also find instructions on how to install Atom-ng's official Linux packages without using a package repository, though you will not get automatic updates after installing Atom-ng this way.
+Configure your distribution's package manager to install and update Atom-ng by following the [Linux installation instructions](https://flight-manual-atom-io.github.io/getting-started/sections/installing-atom/#platform-linux) in the Flight Manual.  You will also find instructions on how to install Atom-ng's official Linux packages without using a package repository, though you will not get automatic updates after installing Atom-ng this way.
 
 #### Archive extraction
 
@@ -70,9 +70,9 @@ repeat these steps to upgrade to future releases.
 
 ## Building
 
-* [Linux](https://web.archive.org/web/20221201143209/https://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#platform-linux)
-* [macOS](https://web.archive.org/web/20221201143209/https://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#platform-mac)
-* [Windows](https://web.archive.org/web/20221201143209/https://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#platform-windows)
+* [Linux](https://flight-manual-atom-io.github.io/hacking-atom/sections/hacking-on-atom-core/#platform-linux)
+* [macOS](https://flight-manual-atom-io.github.io/hacking-atom/sections/hacking-on-atom-core/#platform-mac)
+* [Windows](https://flight-manual-atom-io.github.io/hacking-atom/sections/hacking-on-atom-core/#platform-windows)
 
 ## Discussion
 

@@ -7,10 +7,12 @@ const path = require('path');
 
 const CONFIG = require('../config');
 
+require('colors');
+
 module.exports = packagedAppPath => {
   const archSuffix = process.arch === 'ia32' ? '' : '-' + process.arch;
   const updateUrlPrefix =
-    process.env.ATOM_UPDATE_URL_PREFIX || 'https://atom.io';
+    process.env.ATOM_UPDATE_URL_PREFIX || 'https://github.com/Alex313031/atom-ng';
   const options = {
     name: CONFIG.channelName,
     title: CONFIG.appName,
@@ -52,7 +54,7 @@ module.exports = packagedAppPath => {
     )) {
       if (!nupkgPath.includes(CONFIG.computedAppVersion)) {
         console.log(
-          `Deleting downloaded nupkg for previous version at ${nupkgPath} to prevent it from being stored as an artifact`
+          `Note: Deleting downloaded nupkg for previous version at ${nupkgPath} to prevent it from being stored as an artifact`
         );
         fs.unlinkSync(nupkgPath);
       } else {

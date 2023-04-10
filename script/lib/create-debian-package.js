@@ -8,6 +8,8 @@ const template = require('lodash.template');
 
 const CONFIG = require('../config');
 
+require('colors');
+
 module.exports = function(packagedAppPath) {
   console.log(`Creating Debian package for "${packagedAppPath}"`);
   const atomExecutableName =
@@ -29,7 +31,7 @@ module.exports = function(packagedAppPath) {
 
   const outputDebianPackageFilePath = path.join(
     CONFIG.buildOutputPath,
-    `atom-ng-${CONFIG.appMetadata.version}-${arch}.deb`
+    `Atom-ng_${CONFIG.appMetadata.version}_${arch}.deb`
   );
   const debianPackageDirPath = path.join(
     os.tmpdir(),

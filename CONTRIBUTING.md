@@ -41,7 +41,7 @@ This project and everyone participating in it is governed by the [Atom-ng Code o
 We have an official message board with a detailed FAQ and where the community chimes in with helpful advice if you have questions.
 
 * [Github Discussions, the official Atom-ng message board](https://github.com/Alex313031/atom-ng/discussions)
-* [Atom FAQ](https://flight-manual.atom.io/faq/)
+* [Atom FAQ](https://flight-manual-atom-io.github.io/faq/)
 
 ## What should I know before I get started?
 
@@ -109,8 +109,8 @@ Before creating bug reports, please check [this list](#before-submitting-a-bug-r
 
 #### Before Submitting A Bug Report
 
-* **Check the [debugging guide](https://flight-manual.atom.io/hacking-atom/sections/debugging/).** You might be able to find the cause of the problem and fix things yourself. Most importantly, check if you can reproduce the problem [in the latest version of Atom](https://flight-manual.atom.io/hacking-atom/sections/debugging/#update-to-the-latest-version), if the problem happens when you run Atom-ng in [safe mode](https://flight-manual.atom.io/hacking-atom/sections/debugging/#check-if-the-problem-shows-up-in-safe-mode), and if you can get the desired behavior by changing [Atom's or packages' config settings](https://flight-manual.atom.io/hacking-atom/sections/debugging/#check-atom-and-package-settings).
-* **Check the [faq](https://flight-manual.atom.io/faq/) and the [discussions](https://github.com/atom/atom/discussions)** for a list of common questions and problems.
+* **Check the [debugging guide](https://flight-manual-atom-io.github.io/hacking-atom/sections/debugging/).** You might be able to find the cause of the problem and fix things yourself. Most importantly, check if you can reproduce the problem [in the latest version of Atom](https://flight-manual-atom-io.github.io/hacking-atom/sections/debugging/#update-to-the-latest-version), if the problem happens when you run Atom-ng in [safe mode](https://flight-manual-atom-io.github.io/hacking-atom/sections/debugging/#check-if-the-problem-shows-up-in-safe-mode), and if you can get the desired behavior by changing [Atom's or packages' config settings](https://flight-manual-atom-io.github.io/hacking-atom/sections/debugging/#check-atom-and-package-settings).
+* **Check the [faq](https://flight-manual-atom-io.github.io/faq/) and the [discussions](https://github.com/atom/atom/discussions)** for a list of common questions and problems.
 * **Determine [which repository the problem should be reported in](#atom-and-packages)**.
 * **Perform a [cursory search](https://github.com/search?q=+is%3Aissue+user%3Aatom)** to see if the problem has already been reported. If it has **and the issue is still open**, add a comment to the existing issue instead of opening a new one.
 
@@ -127,13 +127,13 @@ Explain the problem and include additional details to help maintainers reproduce
 * **Explain which behavior you expected to see instead and why.**
 * **Include screenshots and animated GIFs** which show you following the described steps and clearly demonstrate the problem. If you use the keyboard while following the steps, **record the GIF with the [Keybinding Resolver](https://github.com/atom/keybinding-resolver) shown**. You can use [this tool](https://www.cockos.com/licecap/) to record GIFs on macOS and Windows, and [this tool](https://github.com/colinkeenan/silentcast) or [this tool](https://github.com/GNOME/byzanz) on Linux.
 * **If you're reporting that Atom-ng crashed**, include a crash report with a stack trace from the operating system. On macOS, the crash report will be available in `Console.app` under "Diagnostic and usage information" > "User diagnostic reports". Include the crash report in the issue in a [code block](https://help.github.com/articles/markdown-basics/#multiple-lines), a [file attachment](https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/), or put it in a [gist](https://gist.github.com/) and provide link to that gist.
-* **If the problem is related to performance or memory**, include a [CPU profile capture](https://flight-manual.atom.io/hacking-atom/sections/debugging/#diagnose-runtime-performance) with your report.
-* **If Chrome's developer tools pane is shown without you triggering it**, that normally means that you have a syntax error in one of your themes or in your `styles.less`. Try running in [Safe Mode](https://flight-manual.atom.io/hacking-atom/sections/debugging/#using-safe-mode) and using a different theme or comment out the contents of your `styles.less` to see if that fixes the problem.
+* **If the problem is related to performance or memory**, include a [CPU profile capture](https://flight-manual-atom-io.github.io/hacking-atom/sections/debugging/#diagnose-runtime-performance) with your report.
+* **If Chrome's developer tools pane is shown without you triggering it**, that normally means that you have a syntax error in one of your themes or in your `styles.less`. Try running in [Safe Mode](https://flight-manual-atom-io.github.io/hacking-atom/sections/debugging/#using-safe-mode) and using a different theme or comment out the contents of your `styles.less` to see if that fixes the problem.
 * **If the problem wasn't triggered by a specific action**, describe what you were doing before the problem happened and share more information using the guidelines below.
 
 Provide more context by answering these questions:
 
-* **Can you reproduce the problem in [safe mode](https://flight-manual.atom.io/hacking-atom/sections/debugging/#diagnose-runtime-performance-problems-with-the-dev-tools-cpu-profiler)?**
+* **Can you reproduce the problem in [safe mode](https://flight-manual-atom-io.github.io/hacking-atom/sections/debugging/#diagnose-runtime-performance-problems-with-the-dev-tools-cpu-profiler)?**
 * **Did the problem start happening recently** (e.g. after updating to a new version of Atom-ng) or was this always a problem?
 * If the problem started happening recently, **can you reproduce the problem in an older version of Atom-ng?** What's the most recent version in which the problem doesn't happen? You can download older versions of Atom-ng from [the releases page](https://github.com/atom/atom/releases).
 * **Can you reliably reproduce the issue?** If not, provide details about how often the problem happens and under which conditions it normally happens.
@@ -145,7 +145,7 @@ Include details about your configuration and environment:
 * **What's the name and version of the OS you're using**?
 * **Are you running Atom-ng in a virtual machine?** If so, which VM software are you using and which operating systems and versions are used for the host and the guest?
 * **Which [packages](#atom-and-packages) do you have installed?** You can get that list by running `apm list --installed`.
-* **Are you using [local configuration files](https://flight-manual.atom.io/using-atom/sections/basic-customization/)** `config.cson`, `keymap.cson`, `snippets.cson`, `styles.less` and `init.coffee` to customize Atom-ng? If so, provide the contents of those files, preferably in a [code block](https://help.github.com/articles/markdown-basics/#multiple-lines) or with a link to a [gist](https://gist.github.com/).
+* **Are you using [local configuration files](https://flight-manual-atom-io.github.io/using-atom/sections/basic-customization/)** `config.cson`, `keymap.cson`, `snippets.cson`, `styles.less` and `init.coffee` to customize Atom-ng? If so, provide the contents of those files, preferably in a [code block](https://help.github.com/articles/markdown-basics/#multiple-lines) or with a link to a [gist](https://gist.github.com/).
 * **Are you using Atom-ng with multiple monitors?** If so, can you reproduce the problem when you use a single monitor?
 * **Which keyboard layout are you using?** Are you using a US layout or some other layout?
 
@@ -157,7 +157,7 @@ Before creating enhancement suggestions, please check [this list](#before-submit
 
 #### Before Submitting An Enhancement Suggestion
 
-* **Check the [debugging guide](https://flight-manual.atom.io/hacking-atom/sections/debugging/)** for tips — you might discover that the enhancement is already available. Most importantly, check if you're using [the latest version of Atom](https://flight-manual.atom.io/hacking-atom/sections/debugging/#update-to-the-latest-version) and if you can get the desired behavior by changing [Atom's or packages' config settings](https://flight-manual.atom.io/hacking-atom/sections/debugging/#check-atom-and-package-settings).
+* **Check the [debugging guide](https://flight-manual-atom-io.github.io/hacking-atom/sections/debugging/)** for tips — you might discover that the enhancement is already available. Most importantly, check if you're using [the latest version of Atom](https://flight-manual-atom-io.github.io/hacking-atom/sections/debugging/#update-to-the-latest-version) and if you can get the desired behavior by changing [Atom's or packages' config settings](https://flight-manual-atom-io.github.io/hacking-atom/sections/debugging/#check-atom-and-package-settings).
 * **Check if there's already [a package](https://atom.io/packages) which provides that enhancement.**
 * **Determine [which repository the enhancement should be suggested in](#atom-and-packages).**
 * **Perform a [cursory search](https://github.com/search?q=+is%3Aissue+user%3Aatom)** to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
@@ -185,11 +185,11 @@ Unsure where to begin contributing to Atom-ng? You can start by looking through 
 
 Both issue lists are sorted by total number of comments. While not perfect, number of comments is a reasonable proxy for impact a given change will have.
 
-If you want to read about using Atom-ng or developing packages in Atom-ng, the [Atom Flight Manual](https://flight-manual.atom.io) is free and available online. You can find the source to the manual in [atom/flight-manual.atom.io](https://github.com/atom/flight-manual.atom.io).
+If you want to read about using Atom-ng or developing packages in Atom-ng, the [Atom Flight Manual](https://flight-manual-atom-io.github.io) is free and available online. You can find the source to the manual in [atom/flight-manual-atom-io.github.io](https://github.com/atom/flight-manual-atom-io.github.io).
 
 #### Local development
 
-Atom-ng Core and all packages can be developed locally. For instructions on how to do this, see the following sections in the [Atom Flight Manual](https://flight-manual.atom.io):
+Atom-ng Core and all packages can be developed locally. For instructions on how to do this, see the following sections in the [Atom Flight Manual](https://flight-manual-atom-io.github.io):
 
 * [Hacking on Atom Core][hacking-on-atom-core]
 * [Contributing to Official Atom Packages][contributing-to-official-atom-packages]
@@ -262,7 +262,7 @@ All JavaScript code is linted with [Prettier](https://prettier.io/).
 * Place class properties in the following order:
     * Class methods and properties (methods starting with `static`)
     * Instance methods and properties
-* [Avoid platform-dependent code](https://flight-manual.atom.io/hacking-atom/sections/cross-platform-compatibility/)
+* [Avoid platform-dependent code](https://flight-manual-atom-io.github.io/hacking-atom/sections/cross-platform-compatibility/)
 
 ### CoffeeScript Styleguide
 
@@ -293,7 +293,7 @@ All JavaScript code is linted with [Prettier](https://prettier.io/).
 * Place class properties in the following order:
     * Class methods and properties (methods starting with a `@`)
     * Instance methods and properties
-* [Avoid platform-dependent code](https://flight-manual.atom.io/hacking-atom/sections/cross-platform-compatibility/)
+* [Avoid platform-dependent code](https://flight-manual-atom-io.github.io/hacking-atom/sections/cross-platform-compatibility/)
 
 ### Specs Styleguide
 
@@ -374,7 +374,7 @@ Please open an issue on `atom/atom` if you have suggestions for new labels, and 
 | `windows` | [search][search-atom-repo-label-windows] | [search][search-atom-org-label-windows] | Related to Atom-ng running on Windows. |
 | `linux` | [search][search-atom-repo-label-linux] | [search][search-atom-org-label-linux] | Related to Atom-ng running on Linux. |
 | `mac` | [search][search-atom-repo-label-mac] | [search][search-atom-org-label-mac] | Related to Atom-ng running on macOS. |
-| `documentation` | [search][search-atom-repo-label-documentation] | [search][search-atom-org-label-documentation] | Related to any type of documentation (e.g. [API documentation](https://atom.io/docs/api/latest/) and the [flight manual](https://flight-manual.atom.io/)). |
+| `documentation` | [search][search-atom-repo-label-documentation] | [search][search-atom-org-label-documentation] | Related to any type of documentation (e.g. [API documentation](https://atom.io/docs/api/latest/) and the [flight manual](https://flight-manual-atom-io.github.io/)). |
 | `performance` | [search][search-atom-repo-label-performance] | [search][search-atom-org-label-performance] | Related to performance. |
 | `security` | [search][search-atom-repo-label-security] | [search][search-atom-org-label-security] | Related to security. |
 | `ui` | [search][search-atom-repo-label-ui] | [search][search-atom-org-label-ui] | Related to visual design. |
@@ -499,5 +499,5 @@ Please open an issue on `atom/atom` if you have suggestions for new labels, and 
 
 [beginner]:https://github.com/search?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Abeginner+label%3Ahelp-wanted+user%3Aatom+sort%3Acomments-desc
 [help-wanted]:https://github.com/search?q=is%3Aopen+is%3Aissue+label%3Ahelp-wanted+user%3Aatom+sort%3Acomments-desc+-label%3Abeginner
-[contributing-to-official-atom-packages]:https://flight-manual.atom.io/hacking-atom/sections/contributing-to-official-atom-packages/
-[hacking-on-atom-core]: https://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/
+[contributing-to-official-atom-packages]:https://flight-manual-atom-io.github.io/hacking-atom/sections/contributing-to-official-atom-packages/
+[hacking-on-atom-core]: https://flight-manual-atom-io.github.io/hacking-atom/sections/hacking-on-atom-core/

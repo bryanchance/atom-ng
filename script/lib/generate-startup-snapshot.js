@@ -275,7 +275,7 @@ module.exports = function(packagedAppPath) {
     process.stdout.write('\n');
     fs.writeFileSync(snapshotScriptPath, minification.code);
 
-    console.log('Verifying if snapshot can be executed via `mksnapshot`');
+    console.log(' > Verifying that snapshot can be executed via `mksnapshot`');
     const verifySnapshotScriptPath = path.join(
       CONFIG.repositoryRootPath,
       'script',

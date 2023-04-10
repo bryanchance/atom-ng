@@ -1,1 +1,1 @@
-See the [Hacking on Atom Core](https://web.archive.org/web/20221130053817/https://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#platform-windows) section in the [Atom Flight Manual](https://web.archive.org/web/20221130005947/https://flight-manual.atom.io/).
+See the [Hacking on Atom Core](https://flight-manual-atom-io.github.io/hacking-atom/sections/hacking-on-atom-core/#platform-windows) section in the [Atom Flight Manual](https://flight-manual-atom-io.github.io/).
