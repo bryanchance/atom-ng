@@ -20,8 +20,8 @@ module.exports = function() {
   console.log(
     `Generating metadata for ${path.join(
       CONFIG.intermediateAppPath,
-      'package.json...'
-    )}`
+      'package.json'
+    )}...`
   );
   CONFIG.appMetadata._atomPackages = buildBundledPackagesMetadata();
   CONFIG.appMetadata._atomMenu = buildPlatformMenuMetadata();
@@ -42,7 +42,7 @@ module.exports = function() {
     `Generating metadata for ${path.join(
       CONFIG.intermediateAppPath,
       'package.json'
-    )}`
+    )}...`
   );
   CONFIG.appMetadata._atomPackages = buildBundledPackagesMetadata();
   CONFIG.appMetadata._atomMenu = buildPlatformMenuMetadata();
@@ -73,7 +73,7 @@ function buildBundledPackagesMetadata() {
       msg => {
         if (!msg.match(/No README data$/)) {
           console.warn(
-            `Invalid package metadata! | ${packageMetadata.name}: ${msg}`
+            `Invalid package metadata! | ${packageMetadata.name}: ${msg}`.yellow
           );
         }
       },

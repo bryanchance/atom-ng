@@ -19,9 +19,9 @@ require('colors');
 module.exports = function() {
   const appName = getAppName();
   console.log(
-    `Running electron-packager in ${
+    ` > Running electron-packager in ${
       CONFIG.intermediateAppPath
-    } with app name "${appName}"`.green
+    } with app name ` + `"${appName}"`.green
   );
   return runPackager({
     appBundleId: 'com.alex313031.atom',
@@ -92,7 +92,7 @@ module.exports = function() {
 };
 
 function copyNonASARResources(packagedAppPath, bundledResourcesPath) {
-  console.log(`Copying non-ASAR resources to ${bundledResourcesPath}`);
+  console.log(`Copying non-ASAR resources to ${bundledResourcesPath}...`);
   fs.copySync(
     path.join(
       CONFIG.repositoryRootPath,
@@ -192,7 +192,7 @@ function copyNonASARResources(packagedAppPath, bundledResourcesPath) {
     generateAtomCmdForChannel(bundledResourcesPath);
   }
 
-  console.log(`Writing LICENSE.md to ${bundledResourcesPath}`);
+  console.log(`Writing LICENSE.md to ${bundledResourcesPath}...`);
   return getLicenseText().then(licenseText => {
     fs.writeFileSync(
       path.join(bundledResourcesPath, 'LICENSE.md'),
@@ -209,7 +209,7 @@ function setAtomHelperVersion(packagedAppPath) {
     'Contents',
     'Info.plist'
   );
-  console.log(`Setting Atom Helper Version for ${helperPListPath}`);
+  console.log(`Setting Atom Helper Version for ${helperPListPath}...`);
   try {
     spawnSync('/usr/libexec/PlistBuddy', [
       '-c',
@@ -239,7 +239,7 @@ function setAtomHelperVersion(packagedAppPath) {
 }
 
 function chmodNodeFiles(packagedAppPath) {
-  console.log(`Changing permissions for node files in ${packagedAppPath}`);
+  console.log(`Changing exec permissions for node files in ${packagedAppPath}...`);
   childProcess.execSync(
     `find "${packagedAppPath}" -type f -name *.node -exec chmod a-x {} \\;`
   );

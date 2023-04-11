@@ -80,7 +80,7 @@ const configSchema = {
         type: 'string',
         default: 'prompt',
         description:
-          'When should Atom register itself as the default handler for atom:// URIs',
+          'When should Atom register itself as the default handler for atom:// URIs?',
         enum: [
           {
             value: 'prompt',

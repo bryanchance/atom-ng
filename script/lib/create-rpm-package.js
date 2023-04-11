@@ -121,7 +121,7 @@ module.exports = function(packagedAppPath) {
     path.join(rpmPackageBuildDirPath, policyFileName)
   );
 
-  console.log(`Generating .rpm package from "${rpmPackageDirPath}"`...);
+  console.log(`Generating .rpm package from "${rpmPackageDirPath}"...`);
   spawnSync('rpmbuild', ['-ba', '--clean', rpmPackageSpecFilePath]);
   for (let generatedArch of fs.readdirSync(rpmPackageRpmsDirPath)) {
     const generatedArchDirPath = path.join(

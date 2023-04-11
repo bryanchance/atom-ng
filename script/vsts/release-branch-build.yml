@@ -23,9 +23,9 @@ jobs:
     dependsOn:
       - GetReleaseVersion
       - Lint
-      - Windows_build
+      # - Windows_build
       - Linux
-      - macOS_build
+      # - macOS_build
 
     variables:
       ReleaseVersion: $[ dependencies.GetReleaseVersion.outputs['Version.ReleaseVersion'] ]

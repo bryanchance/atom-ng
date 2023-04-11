@@ -55,20 +55,21 @@ fi
 cp -v ./gitconfig ~/.gitconfig &&
 printf "\n" &&
 
+cd ./packages/atom-material-ui &&
+npm run clean && npm run build && cd ..&&
+cd atom-material-syntax-dark &&
+npm run clean && npm run build && cd .. && cd .. &&
+
 cd ./dot-atom/packages &&
 cd atom-ng-browser &&
 npm run clean && npm run build && cd .. &&
 cd color-picker &&
 npm run clean && npm run build && cd .. &&
 cd minimap &&
-npm run clean && npm install && npm run build &&
+rm -r -f -v node_modules && npm install && npm run build &&
 cd .. && cd .. && cd .. &&
 
 printf "\n" &&
 rm -v ~/.gitconfig &&
-if [ -e ~/.gitconfig_bak ]
-  then
-  mv -i -v ~/.gitconfig_bak ~/.gitconfig
-fi
 printf "\n"
 exit 0

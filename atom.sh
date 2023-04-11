@@ -88,7 +88,7 @@ if [ $REDIRECT_STDERR ]; then
 fi
 
 ATOM_HOME="${ATOM_HOME:-$HOME/.atom}"
-#mkdir -p "$ATOM_HOME"
+mkdir -p "$ATOM_HOME"
 
 if [ $OS == 'Mac' ]; then
   if [ -L "$0" ]; then
@@ -186,13 +186,13 @@ elif [ $OS == 'Linux' ]; then
       exit ${ATOM_EXIT}
     fi
   else
-    "$ATOM_PATH" --executed-from="$(pwd)" --pid=$$ "$@"
-    ATOM_EXIT=$?
-    if [ ${ATOM_EXIT} -eq 0 ] && [ -n "${EXIT_CODE_OVERRIDE}" ]; then
-      exit "${EXIT_CODE_OVERRIDE}"
-    else
-      exit ${ATOM_EXIT}
+    (
+    nohup "$ATOM_PATH" --executed-from="$(pwd)" --pid=$$ "$@" > "$ATOM_HOME/nohup.out" 2>&1
+    if [ $? -ne 0 ]; then
+      cat "$ATOM_HOME/nohup.out"
+      exit $?
     fi
+    ) &
   fi
 fi
 

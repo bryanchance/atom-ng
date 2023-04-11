@@ -31,7 +31,6 @@
     "esdoc": "esdoc -c esdoc.json",
     "format": "prettier --write .",
     "lint": "eslint . --fix",
-    "prepare": "npm run build",
     "test": "atom --test spec",
     "test.format": "prettier . --check",
     "test.lint": "eslint ."
