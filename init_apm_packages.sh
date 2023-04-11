@@ -57,11 +57,11 @@ printf "\n" &&
 
 cd ./dot-atom/packages &&
 cd atom-ng-browser &&
-npm install && cd .. &&
+npm run clean && npm run build && cd .. &&
 cd color-picker &&
-npm install && cd .. &&
+npm run clean && npm run build && cd .. &&
 cd minimap &&
-rm -r -f -v node_modules && npm install && npm run build && rm -r -f -v node_modules && NODE_ENV=production npm install &&
+npm run clean && npm install && npm run build &&
 cd .. && cd .. && cd .. &&
 
 printf "\n" &&

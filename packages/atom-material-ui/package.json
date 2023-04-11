@@ -1,9 +1,15 @@
 {
   "name": "atom-material-ui",
   "theme": "ui",
-  "version": "2.1.4",
-  "description": "A dynamic UI theme for Atom that follows Google's Material Design Guidelines",
+  "version": "2.1.5",
+  "author": "Alex313031 <Alex313031@gmail.com>",
+  "description": "A dynamic UI theme for Atom-ng that follows Google's Material Design Guidelines",
   "main": "./lib/main",
+  "scripts": {
+    "test": "atom --test spec",
+    "clean": "rm -r -f -v node_modules",
+    "build": "NODE_ENV=production npm install"
+  },
   "keywords": [
     "ui",
     "theme",
@@ -14,7 +20,7 @@
     "adapt to syntax",
     "material design"
   ],
-  "repository": "https://github.com/atom-material/atom-material-ui",
+  "repository": "https://github.com/Alex313031/atom-material-ui",
   "license": "MIT",
   "engines": {
     "atom": ">=1.17.0 <2.0.0"

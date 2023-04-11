@@ -31,7 +31,7 @@ module.exports = function(packagedAppPath) {
 
   const outputDebianPackageFilePath = path.join(
     CONFIG.buildOutputPath,
-    `Atom-ng_${CONFIG.appMetadata.version}_${arch}.deb`
+    `atom-ng_${CONFIG.appMetadata.version}_${arch}.deb`
   );
   const debianPackageDirPath = path.join(
     os.tmpdir(),
@@ -64,25 +64,25 @@ module.exports = function(packagedAppPath) {
 
   if (fs.existsSync(debianPackageDirPath)) {
     console.log(
-      `Deleting existing build dir for Debian package at "${debianPackageDirPath}"`
+      `Deleting existing build dir for Debian package at "${debianPackageDirPath}"....`
     );
     fs.removeSync(debianPackageDirPath);
   }
   if (fs.existsSync(`${debianPackageDirPath}.deb`)) {
     console.log(
-      `Deleting existing Debian package at "${debianPackageDirPath}.deb"`
+      `Deleting existing Debian package at "${debianPackageDirPath}.deb"...`
     );
     fs.removeSync(`${debianPackageDirPath}.deb`);
   }
   if (fs.existsSync(debianPackageDirPath)) {
     console.log(
-      `Deleting existing Debian package at "${outputDebianPackageFilePath}"`
+      `Deleting existing Debian package at "${outputDebianPackageFilePath}"...`
     );
     fs.removeSync(debianPackageDirPath);
   }
 
   console.log(
-    `Creating Debian package directory structure at "${debianPackageDirPath}"`
+    `Creating Debian package directory structure at "${debianPackageDirPath}"...`
   );
   fs.mkdirpSync(debianPackageDirPath);
   fs.mkdirpSync(debianPackageConfigPath);
@@ -93,11 +93,11 @@ module.exports = function(packagedAppPath) {
   fs.mkdirpSync(debianPackageDocsDirPath);
   fs.mkdirpSync(debianPackageBinDirPath);
 
-  console.log(`Copying "${packagedAppPath}" to "${debianPackageAtomDirPath}"`);
+  console.log(`Copying "${packagedAppPath}" to "${debianPackageAtomDirPath}"...`);
   fs.copySync(packagedAppPath, debianPackageAtomDirPath);
   fs.chmodSync(debianPackageAtomDirPath, '755');
 
-  console.log(`Copying binaries into "${debianPackageBinDirPath}"`);
+  console.log(`Copying binaries into "${debianPackageBinDirPath}"...`);
   fs.copySync(
     path.join(CONFIG.repositoryRootPath, 'atom.sh'),
     path.join(debianPackageBinDirPath, atomExecutableName)
@@ -117,6 +117,7 @@ module.exports = function(packagedAppPath) {
     path.join(debianPackageBinDirPath, apmExecutableName)
   );
 
+  console.log(`Setting permission 4755 on 'chrome-sandbox'`);
   fs.chmodSync(path.join(debianPackageAtomDirPath, 'chrome-sandbox'), '4755');
 
   console.log(`Writing control file into "${debianPackageConfigPath}"`);
@@ -197,17 +198,17 @@ module.exports = function(packagedAppPath) {
       debianPackageShareDirPath,
       'polkit-1',
       'actions',
-      `atom-${CONFIG.channel}.policy`
+      `atom-ng-${CONFIG.channel}.policy`
     )
   );
 
-  console.log(`Generating .deb file from ${debianPackageDirPath}`);
+  console.log(`Generating .deb file from ${debianPackageDirPath}...`);
   spawnSync('fakeroot', ['dpkg-deb', '-b', debianPackageDirPath], {
     stdio: 'inherit'
   });
 
   console.log(
-    `Copying generated package into "${outputDebianPackageFilePath}"`
+    `Copying generated package into` + `"${outputDebianPackageFilePath}"`.green
   );
   fs.copySync(`${debianPackageDirPath}.deb`, outputDebianPackageFilePath);
 };

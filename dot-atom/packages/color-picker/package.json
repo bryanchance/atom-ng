@@ -1,27 +1,32 @@
 {
   "name": "color-picker",
   "main": "./lib/ColorPicker",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "private": true,
-  "description": "Right click or press CMD-SHIFT-C/CTRL-ALT-C to open it.",
+  "description": "Color Picker for Atom-ng. Right click or press CMD-SHIFT-C/CTRL-ALT-C to open it.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thomaslindstrom/color-picker"
+    "url": "https://github.com/Alex313031/color-picker-ng"
   },
   "keywords": [
     "colors",
     "design",
     "ui"
   ],
+  "scripts": {
+    "test": "atom --test spec",
+    "clean": "rm -r -f -v node_modules",
+    "build": "NODE_ENV=production npm install"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">=1.2.4"
   },
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/thomaslindstrom/color-picker/issues"
+    "url": "https://github.com/Alex313031/color-picker-ng/issues"
   },
-  "homepage": "https://github.com/thomaslindstrom/color-picker",
+  "homepage": "https://github.com/Alex313031/color-picker-ng",
   "providedServices": {
     "color-picker": {
       "versions": {

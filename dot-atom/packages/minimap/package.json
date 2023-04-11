@@ -1,10 +1,10 @@
 {
   "name": "minimap",
-  "version": "4.40.2",
-  "description": "A preview of the full source code.",
-  "repository": "https://github.com/atom-minimap/minimap",
+  "version": "4.40.3",
+  "description": "A side-docked preview of the full document.",
+  "repository": "https://github.com/Alex313031/minimap-ng",
   "license": "MIT",
-  "author": "Fangdun Cai <cfddream@gmail.com>, Amin Yahyaabadi <aminyahyaabadi74@gmail.com>",
+  "author": "Alex313031 <Alex313031@gmail.com>",
   "contributors": [
     {
       "name": "Fangdun Cai",
@@ -21,11 +21,12 @@
   ],
   "main": "./dist/main.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production parcel build --target main ./lib/main.js",
+    "build": "cross-env NODE_ENV=production parcel build --target main ./lib/main.js && npm run postbuild",
+    "postbuild": "rm -r -f -v node_modules && NODE_ENV=production npm install",
     "build-commit": "npm run clean && build-commit -o dist",
     "build.test": "npm run clean && cross-env NODE_ENV=test parcel build --target main ./lib/main.js",
     "bump": "ncu -u",
-    "clean": "shx rm -rf dist .parcel-cache",
+    "clean": "shx rm -rf dist .parcel-cache node_modules",
     "dev": "cross-env NODE_ENV=development parcel watch --target main ./lib/main.js",
     "esdoc": "esdoc -c esdoc.json",
     "format": "prettier --write .",
@@ -47,7 +48,6 @@
   "devDependencies": {
     "@types/atom": "^1.40.12",
     "@types/jasmine": "3.10.3",
-    "build-commit": "^0.1.4",
     "cross-env": "^7.0.3",
     "esdoc": "^1.1.0",
     "esdoc-es7-plugin": "^0.0.3",
@@ -63,7 +63,7 @@
   },
   "engines": {
     "atom": ">=1.52.0",
-    "electron": ">=6.0.0"
+    "electron": ">=11.5.0"
   },
   "keywords": [
     "minimap",

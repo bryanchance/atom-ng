@@ -3,6 +3,6 @@ npm-debug.log
 node_modules
 .live-archive
 pages
-dist
+/dist/
 .parcel-cache
 package-lock.json

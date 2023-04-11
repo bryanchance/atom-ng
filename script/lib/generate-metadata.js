@@ -20,7 +20,7 @@ module.exports = function() {
   console.log(
     `Generating metadata for ${path.join(
       CONFIG.intermediateAppPath,
-      'package.json'
+      'package.json...'
     )}`
   );
   CONFIG.appMetadata._atomPackages = buildBundledPackagesMetadata();
@@ -73,7 +73,7 @@ function buildBundledPackagesMetadata() {
       msg => {
         if (!msg.match(/No README data$/)) {
           console.warn(
-            `Invalid package metadata. ${packageMetadata.name}: ${msg}`
+            `Invalid package metadata! | ${packageMetadata.name}: ${msg}`
           );
         }
       },

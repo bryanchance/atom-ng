@@ -338,7 +338,7 @@ module.exports = function(packagedAppPath) {
           'v8_context_snapshot.x86_64.bin'
         );
       }
-      console.log(`Moving generated startup blob into "${destinationPath}"`);
+      console.log(`Moving generated startup blob into "${destinationPath}"...`);
       try {
         fs.unlinkSync(destinationPath);
       } catch (err) {
@@ -353,4 +353,5 @@ module.exports = function(packagedAppPath) {
       );
     }
   });
+  console.log(`Done.`);
 };

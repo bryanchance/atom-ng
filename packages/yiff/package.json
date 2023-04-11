@@ -1,6 +1,6 @@
 {
-  "name": "yiff",
-  "version": "0.1.2",
+  "name": "yiff-view",
+  "version": "0.1.3",
   "description": "Show naughty yiff art.",
   "main": "./lib/main",
   "atomTestRunner": "atom-mocha-test-runner",
@@ -13,8 +13,7 @@
     "lint": "standard",
     "test": "atom --test test/*.test.js"
   },
-  "consumedServices": {
-  },
+  "consumedServices": {},
   "configSchema": {
     "showOnStartup": {
       "type": "boolean",
