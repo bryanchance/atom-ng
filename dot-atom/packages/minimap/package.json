@@ -22,11 +22,11 @@
   "main": "./dist/main.js",
   "scripts": {
     "build": "npm install && cross-env NODE_ENV=production parcel build --target main ./lib/main.js && npm run postbuild",
-    "postbuild": "rm -rf -v node_modules && npm --production install",
+    "postbuild": "shx rm -rf -v node_modules && npm --production install",
     "build-commit": "npm run clean && build-commit -o dist",
     "build.test": "npm run clean && cross-env NODE_ENV=test parcel build --target main ./lib/main.js",
     "bump": "ncu -u",
-    "clean": "rm -rf -v dist .parcel-cache node_modules",
+    "clean": "shx rm -rf -v dist .parcel-cache node_modules",
     "dev": "cross-env NODE_ENV=development parcel watch --target main ./lib/main.js",
     "esdoc": "esdoc -c esdoc.json",
     "format": "prettier --write .",
@@ -42,7 +42,8 @@
     "delegato": "^1.0.0",
     "element-resize-detector": "^1.2.4",
     "fs-plus": "^3.1.1",
-    "mixto": "^1.0.0"
+    "mixto": "^1.0.0",
+    "shx": "^0.3.4"
   },
   "devDependencies": {
     "@types/atom": "^1.40.12",

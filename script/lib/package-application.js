@@ -192,7 +192,7 @@ function copyNonASARResources(packagedAppPath, bundledResourcesPath) {
     generateAtomCmdForChannel(bundledResourcesPath);
   }
 
-  console.log(`Writing LICENSE.md to ${bundledResourcesPath}...`);
+  console.log(`Writing LICENSE.md to ${bundledResourcesPath}`);
   return getLicenseText().then(licenseText => {
     fs.writeFileSync(
       path.join(bundledResourcesPath, 'LICENSE.md'),
