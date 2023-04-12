@@ -1,24 +1,18 @@
 {
    "scripts": {
-      "test": "atom --test spec",
-      "clean": "rm -rf -v node_modules",
-      "build": "npm --production install"
+      "test": "atom --test spec"
    },
    "bugs": {
-      "url": "https://github.com/Alex313031/atom-ng-browser/issues"
+      "url": "https://github.com/sean-codes/atom-browser/issues"
    },
-   "description": "Atom-ng-Browser is the plugin to browse the web, preview files, auto-reload, and search Google within Atom-ng",
+   "description": "Atom-Browser is the plugin to browse the web, preview files, auto-reload, and search Google within Atom",
+   "devDependencies": {},
    "engines": {
       "atom": ">=1.57.0 <2.0.0"
    },
-   "author": "Alex313031 <Alex313031@gmail.com>",
-   "homepage": "https://github.com/Alex313031/atom-ng-browser#readme",
+   "homepage": "https://github.com/sean-codes/atom-browser#readme",
    "keywords": [
       "browser",
-      "atom",
-      "atom-ng",
-      "chromium",
-      "webview",
       "preview",
       "live reload",
       "web view",
@@ -26,18 +20,15 @@
    ],
    "license": "MIT",
    "main": "./lib/atom-browser",
-   "name": "atom-ng-browser",
+   "name": "atom-browser",
    "optionalDependencies": {},
-   "readme": "Atom-ng-Browser is a plugin to browse the web, preview files, auto-reload, and search Google within Atom-ng",
+   "readme": "Atom-Browser is the plugin to browse the web, preview files, auto-reload, and search Google within Atom",
    "readmeFilename": "README.md",
-   "dependencies": {
-      "express": "^4.17.3"
-   },
    "repository": {
       "type": "git",
-      "url": "git@github.com:Alex313031/atom-ng-browser.git"
+      "url": "git@github.com:sean-codes/atom-browser.git"
    },
-   "version": "2.1.3",
+   "version": "2.1.0",
    "_atomModuleCache": {
       "version": 1,
       "dependencies": [],
@@ -116,7 +107,7 @@
       },
       "defaultLocation": {
          "title": "Default Location",
-         "description": "Choose the default dock location for the Atom-ng Browser: right or bottom",
+         "description": "Choose the default dock location for the Atom Browser: right or bottom",
          "type": "string",
          "default": "bottom",
          "enum": [
@@ -131,10 +122,10 @@
          ]
       },
       "initialUrl": {
-         "title": "Initial URL",
+         "title": "Initial Url",
          "description": "An initial URL to start in",
          "type": "string",
-         "default": "https://www.google.com/"
+         "default": ""
       },
       "z_experimental": {
          "type": "object",
@@ -165,5 +156,8 @@
             }
          }
       }
+   },
+   "dependencies": {
+      "express": "^4.17.1"
    }
 }
