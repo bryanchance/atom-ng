@@ -13,4 +13,4 @@ set GYP_MSVS_VERSION=2017
 set ELECTRON_CACHE=%~dp0%electron\bin
 set electron_config_cache=%~dp0%electron\bin
 
-cd .\packages\atom-material-ui&&npm run build&&cd ..&&cd atom-material-syntax-dark&&npm run build&&cd ..&&cd ..&&cd .\dot-atom\packages&&cd atom-ng-browser&&npm run build&&cd ..&&cd color-picker&&npm run build&&cd ..&&cd minimap&&rmdir /s node_modules&&npm run build&&cd ..&&cd ..&&cd ..
+cd .\packages\atom-material-ui&&npm run build&&cd ..&&cd atom-material-syntax-dark&&npm run build&&cd ..&&cd ..&&cd .\dot-atom\packages&&cd atom-ng-browser&&npm run build&&cd ..&&cd color-picker&&npm run build&&cd ..&&cd minimap&&npm run build&&cd ..&&cd ..&&cd ..

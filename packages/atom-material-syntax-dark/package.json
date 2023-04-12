@@ -6,10 +6,9 @@
   "scripts": {
     "test": "atom --test spec",
     "clean": "shx rm -rf -v node_modules",
-    "build": "npm install && cross-env NODE_ENV=production npm install"
+    "build": "npm install && npm run clean && npm --production install"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "shx": "^0.3.4"
   },
   "description": "A darker syntax theme for Atom-ng that uses Google's Material Design color palette",

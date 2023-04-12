@@ -65,8 +65,7 @@ cd atom-ng-browser &&
 npm run build && cd .. &&
 cd color-picker &&
 npm run build && cd .. &&
-cd minimap &&
-rm -r -f -v node_modules && npm run build &&
+cd minimap && npm run build &&
 cd .. && cd .. && cd .. &&
 
 printf "\n" &&
