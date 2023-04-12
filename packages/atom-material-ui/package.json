@@ -1,14 +1,14 @@
 {
   "name": "atom-material-ui",
   "theme": "ui",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "author": "Alex313031 <Alex313031@gmail.com>",
   "description": "A dynamic UI theme for Atom-ng that follows Google's Material Design Guidelines",
   "main": "./lib/main",
   "scripts": {
     "test": "atom --test spec",
-    "clean": "rm -r -f -v node_modules",
-    "build": "NODE_ENV=production npm install"
+    "clean": "shx rm -rf -v node_modules",
+    "build": "npm install && cross-env NODE_ENV=production npm install"
   },
   "keywords": [
     "ui",
@@ -30,11 +30,13 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
+    "cross-env": "^7.0.3",
     "eslint": "^3.17.1",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0"
+    "eslint-plugin-react": "^6.10.0",
+    "shx": "^0.3.4"
   },
   "configSchema": {
     "colors": {

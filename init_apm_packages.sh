@@ -66,7 +66,7 @@ npm run clean && npm run build && cd .. &&
 cd color-picker &&
 npm run clean && npm run build && cd .. &&
 cd minimap &&
-rm -r -f -v node_modules && npm install && npm run build &&
+rm -r -f -v node_modules && npm run build &&
 cd .. && cd .. && cd .. &&
 
 printf "\n" &&

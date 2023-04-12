@@ -1,6 +1,6 @@
 {
   "name": "minimap",
-  "version": "4.40.3",
+  "version": "4.40.4",
   "description": "A side-docked preview of the full document.",
   "repository": "https://github.com/Alex313031/minimap-ng",
   "license": "MIT",
@@ -21,12 +21,12 @@
   ],
   "main": "./dist/main.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production parcel build --target main ./lib/main.js && npm run postbuild",
-    "postbuild": "rm -r -f -v node_modules && NODE_ENV=production npm install",
+    "build": "npm install && cross-env NODE_ENV=production parcel build --target main ./lib/main.js && npm run postbuild",
+    "postbuild": "cross-env NODE_ENV=production npm install",
     "build-commit": "npm run clean && build-commit -o dist",
     "build.test": "npm run clean && cross-env NODE_ENV=test parcel build --target main ./lib/main.js",
     "bump": "ncu -u",
-    "clean": "shx rm -rf dist .parcel-cache node_modules",
+    "clean": "shx rm -rf -v dist .parcel-cache node_modules",
     "dev": "cross-env NODE_ENV=development parcel watch --target main ./lib/main.js",
     "esdoc": "esdoc -c esdoc.json",
     "format": "prettier --write .",
