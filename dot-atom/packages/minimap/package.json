@@ -23,7 +23,6 @@
   "scripts": {
     "build": "npm install && cross-env NODE_ENV=production parcel build --target main ./lib/main.js && npm run postbuild",
     "postbuild": "shx rm -rf -v node_modules && npm --production install",
-    "build-commit": "npm run clean && build-commit -o dist",
     "build.test": "npm run clean && cross-env NODE_ENV=test parcel build --target main ./lib/main.js",
     "bump": "ncu -u",
     "clean": "shx rm -rf -v dist .parcel-cache node_modules",
