@@ -82,7 +82,7 @@ module.exports = function(packagedAppPath) {
   }
 
   console.log(
-    `Creating Debian package directory structure at "${debianPackageDirPath}"...`
+    `Creating deb package directory structure at "${debianPackageDirPath}"...`
   );
   fs.mkdirpSync(debianPackageDirPath);
   fs.mkdirpSync(debianPackageConfigPath);
