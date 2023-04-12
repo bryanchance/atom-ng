@@ -56,15 +56,15 @@ cp -v ./gitconfig ~/.gitconfig &&
 printf "\n" &&
 
 cd ./packages/atom-material-ui &&
-npm run clean && npm run build && cd ..&&
+npm run build && cd ..&&
 cd atom-material-syntax-dark &&
-npm run clean && npm run build && cd .. && cd .. &&
+npm run build && cd .. && cd .. &&
 
 cd ./dot-atom/packages &&
 cd atom-ng-browser &&
-npm run clean && npm run build && cd .. &&
+npm run build && cd .. &&
 cd color-picker &&
-npm run clean && npm run build && cd .. &&
+npm run build && cd .. &&
 cd minimap &&
 rm -r -f -v node_modules && npm run build &&
 cd .. && cd .. && cd .. &&
