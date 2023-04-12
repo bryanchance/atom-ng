@@ -15,12 +15,8 @@
   ],
   "scripts": {
     "test": "atom --test spec",
-    "clean": "shx rm -rf -v node_modules",
-    "build": "npm install && npm run clean && npm --production install"
-  },
-  "devDependencies": {
-    "cross-env": "^7.0.3",
-    "shx": "^0.3.4"
+    "clean": "rm -rf -v node_modules",
+    "build": "npm --production install"
   },
   "license": "MIT",
   "engines": {

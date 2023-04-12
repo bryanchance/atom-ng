@@ -5,12 +5,8 @@
   "author": "Alex313031 <Alex313031@gmail.com>",
   "scripts": {
     "test": "atom --test spec",
-    "clean": "shx rm -rf -v node_modules",
-    "build": "npm install && npm run clean && npm --production install",
-    "winbuild": "npm --production install"
-  },
-  "devDependencies": {
-    "shx": "^0.3.4"
+    "clean": "rm -rf -v node_modules",
+    "build": "npm --production install"
   },
   "description": "A darker syntax theme for Atom-ng that uses Google's Material Design color palette",
   "keywords": [
