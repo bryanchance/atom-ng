@@ -8,7 +8,8 @@
   "scripts": {
     "test": "atom --test spec",
     "clean": "shx rm -rf -v node_modules",
-    "build": "npm install && npm run clean && npm --production install"
+    "build": "npm install && npm run clean && npm --production install",
+    "winbuild": "npm --production install"
   },
   "keywords": [
     "ui",
