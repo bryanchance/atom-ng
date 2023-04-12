@@ -2,7 +2,7 @@
   "name": "color-picker",
   "main": "./lib/ColorPicker",
   "version": "2.3.2",
-  "private": true,
+  "private": false,
   "description": "Color Picker for Atom-ng. Right click or press CMD-SHIFT-C/CTRL-ALT-C to open it.",
   "repository": {
     "type": "git",
