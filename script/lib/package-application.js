@@ -84,7 +84,7 @@ module.exports = function() {
 
     return copyNonASARResources(packagedAppPath, bundledResourcesPath).then(
       () => {
-        console.log(`\nApplication bundle created at ` + `${packagedAppPath}\n`.green);
+        console.log(`\nApplication bundle created at ` + `${packagedAppPath}`.green);
         return packagedAppPath;
       }
     );
