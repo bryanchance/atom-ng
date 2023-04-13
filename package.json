@@ -160,7 +160,7 @@
     "season": "^6.0.2",
     "semver": "7.3.8",
     "service-hub": "^0.7.4",
-    "settings-view": "git+https://github.com/Alex313031/settings-view-ng.git#6cebfaa",
+    "settings-view": "git+https://github.com/Alex313031/settings-view-ng.git#dccd6cd",
     "sinon": "9.2.1",
     "snippets": "git+https://github.com/Alex313031/snippets-ng.git#a63e410",
     "solarized-dark-syntax": "file:packages/solarized-dark-syntax",
