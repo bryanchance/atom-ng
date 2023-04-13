@@ -11,5 +11,6 @@
   },
   "packageDependencies": {
     "atom-package-manager": "2.6.9"
-  }
+  },
+  "win7-rev": "c3c0da1"
 }
