@@ -21,7 +21,7 @@ module.exports = function(packagedAppPath) {
   if (process.platform === 'darwin') {
     const symbolsArchivePath = path.join(
       CONFIG.buildOutputPath,
-      'Atom-ng_${CONFIG.appMetadata.version}_mac-symbols.zip'
+      'Atom-ng_${CONFIG.appMetadata.version}_mac_symbols.zip'
     );
     compress(CONFIG.symbolsPath, symbolsArchivePath);
   }
@@ -32,7 +32,7 @@ function getArchiveName() {
     case 'darwin':
       return 'Atom-ng_${CONFIG.appMetadata.version}_mac.zip';
     case 'win32':
-      return `Atom-ng_${CONFIG.appMetadata.version}_win-${process.arch === 'x64' ? 'x64' : ''}.zip`;
+      return `Atom-ng_${CONFIG.appMetadata.version}_win_${process.arch === 'x64' ? 'x64' : ''}.zip`;
     default:
       return `Atom-ng_${CONFIG.appMetadata.version}_${getLinuxArchiveArch()}.tar.gz`;
   }

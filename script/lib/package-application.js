@@ -209,7 +209,7 @@ function setAtomHelperVersion(packagedAppPath) {
     'Contents',
     'Info.plist'
   );
-  console.log(`Setting Atom Helper Version for ${helperPListPath}...`);
+  console.log(`Setting Atom-ng Helper Version for ${helperPListPath}...`);
   try {
     spawnSync('/usr/libexec/PlistBuddy', [
       '-c',
@@ -278,7 +278,7 @@ async function runPackager(options) {
 
   assert(
     packageOutputDirPaths.length === 1,
-    'Generated more than one electron application!'
+    'Generated more than one electron application!'.red
   );
 
   return renamePackagedAppDir(packageOutputDirPaths[0]);
