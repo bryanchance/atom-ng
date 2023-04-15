@@ -31,7 +31,7 @@ module.exports = packagedAppPath => {
     outputDirectory: CONFIG.buildOutputPath,
     noMsi: true,
     noDelta: true,
-    setupExe: `Atom-ng_${CONFIG.appMetadata.version}_Setup${process.arch === 'x64' ? '-x64' : ''}.exe`,
+    setupExe: `Atom-ng_${CONFIG.appMetadata.version}_Setup_${process.arch === 'x64' ? 'x64' : 'x32'}.exe`,
     setupIcon: path.join(
       CONFIG.repositoryRootPath,
       'resources',
