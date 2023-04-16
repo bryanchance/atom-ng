@@ -8,11 +8,12 @@ For Atom releases from upstream Atom, see > https://web.archive.org/web/20221210
 ### 1.66.9
  - Updated Electron to use my custom compiler optimized builds! See [here](https://github.com/Alex313031/electron-12.2.3)
  - Updated apm-ng to 2.6.9, taking patches from Atom-Community > https://github.com/Alex313031/apm-ng/commit/6e0cd14d19e6c02140112b7bb3bddf3147a0eba3
- - Updated tree-view to include an "Open File" button
+ - Updated [tree-view](https://github.com/Alex313031/tree-view-ng) to include an "Open File" button and use an [Octocat image](https://github.com/Alex313031/tree-view-ng/blob/master/assets/Floating_Octocat.svg) instead of the Telescope image as the background.
+ - Updated [background-tips](https://github.com/Alex313031/background-tips-ng)
  - Added [atom-ng-browser](https://github.com/Alex313031/atom-ng-browser) package, which allows rendering local files and searching the web, as well as rendering internal stuff like chrome://gpu!
  - Minor subdeps updates for modules
  - Added [portable runner scripts](https://github.com/Alex313031/atom-ng/tree/master/portable) and readme to the installers and .zips (and made atom-ng search for a `.atom` folder alongside it, rather than a directory above, which never made sense.
- - Made forks of electron-chromedriver, electron-mksnapshot, and electron-packager to support caching electron downloads in './electron', and to facilitate my custom binaries.
+ - Made forks of [electron-chromedriver](https://github.com/Alex313031/chromedriver-ng), [electron-mksnapshot](https://github.com/Alex313031/mksnapshot-ng), [electron-link](https://github.com/Alex313031/electron-link-ng) and [electron-packager](https://github.com/Alex313031/electron-packager-ng) to support caching electron downloads in './electron', and to facilitate my custom binaries.
  - Fixed package ID for Mac and Windows installer: com.github.atom >> com.alex313031.atom
  - Enabled GPU rasterization, VAAPI, and QUIC
  - New command line flag `--fps` which will append --show-fps-counter to electron and show a developer heads up display showing FPS and GPU Mem usage of all overlays
