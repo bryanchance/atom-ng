@@ -10,7 +10,10 @@ For Atom releases from upstream Atom, see > https://web.archive.org/web/20221210
  - Updated apm-ng to 2.6.9, taking patches from Atom-Community > https://github.com/Alex313031/apm-ng/commit/6e0cd14d19e6c02140112b7bb3bddf3147a0eba3
  - Updated [tree-view](https://github.com/Alex313031/tree-view-ng) to include an "Open File" button and use an [Octocat image](https://github.com/Alex313031/tree-view-ng/blob/master/assets/Floating_Octocat.svg) instead of the Telescope image as the background.
  - Updated [background-tips](https://github.com/Alex313031/background-tips-ng)
- - Added [atom-ng-browser](https://github.com/Alex313031/atom-ng-browser) package, which allows rendering local files and searching the web, as well as rendering internal stuff like chrome://gpu!
+ - Added [atom-ng-browser](https://github.com/Alex313031/atom-ng-browser) package, which allows rendering local files and searching the web, as well as rendering internal stuff like `chrome://gpu`!
+ - Added Windows 7 Support for `apm`
+ - Fixed apm installer name for Windows
+ - Changed .exe author name
  - Minor subdeps updates for modules
  - Added [portable runner scripts](https://github.com/Alex313031/atom-ng/tree/master/portable) and readme to the installers and .zips (and made atom-ng search for a `.atom` folder alongside it, rather than a directory above, which never made sense.
  - Made forks of [electron-chromedriver](https://github.com/Alex313031/chromedriver-ng), [electron-mksnapshot](https://github.com/Alex313031/mksnapshot-ng), [electron-link](https://github.com/Alex313031/electron-link-ng) and [electron-packager](https://github.com/Alex313031/electron-packager-ng) to support caching electron downloads in './electron', and to facilitate my custom binaries.

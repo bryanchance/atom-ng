@@ -18,7 +18,7 @@ module.exports = packagedAppPath => {
     title: CONFIG.appName,
     exe: CONFIG.executableName,
     appDirectory: packagedAppPath,
-    authors: 'GitHub Inc. and Alex313031',
+    authors: 'Alex313031 & GitHub Inc.',
     iconUrl: `https://raw.githubusercontent.com/Alex313031/atom-ng/master/resources/app-icons/${
       CONFIG.channel
     }/atom.ico`,
