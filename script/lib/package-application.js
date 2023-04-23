@@ -65,7 +65,7 @@ module.exports = function() {
     win32metadata: {
       CompanyName: 'Alex313031',
       FileDescription: 'Atom-ng',
-      InternalName: 'Atom-ng',
+      InternalName: CONFIG.internalName,
       ProductName: CONFIG.appName
     }
   }).then(packagedAppPath => {
