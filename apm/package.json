@@ -7,10 +7,10 @@
     "url": "https://github.com/Alex313031/apm-ng"
   },
   "dependencies": {
-    "atom-package-manager": "git+https://github.com/Alex313031/apm-ng.git#8fea185"
+    "atom-package-manager": "git+https://github.com/Alex313031/apm-ng.git#a513f5b"
   },
   "packageDependencies": {
     "atom-package-manager": "2.6.9"
   },
-  "win7-rev": "98133a3"
+  "win7-rev": "15a7108"
 }
