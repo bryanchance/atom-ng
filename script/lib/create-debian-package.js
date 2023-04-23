@@ -15,7 +15,7 @@ module.exports = function(packagedAppPath) {
   const atomExecutableName =
     CONFIG.channel === 'stable' ? 'atom-ng' : `atom-ng-${CONFIG.channel}`;
   const apmExecutableName =
-    CONFIG.channel === 'stable' ? 'apm' : `apm-${CONFIG.channel}`;
+    CONFIG.channel === 'stable' ? 'apm-ng' : `apm-ng-${CONFIG.channel}`;
   const appDescription = CONFIG.appMetadata.description;
   const appVersion = CONFIG.appMetadata.version;
   let arch;

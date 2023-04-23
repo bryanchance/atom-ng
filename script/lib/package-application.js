@@ -244,6 +244,8 @@ function chmodNodeFiles(packagedAppPath) {
   childProcess.execSync(
     `find "${packagedAppPath}" -type f -name *.node -exec chmod a-x {} \\;`
   );
+  console.log(`Setting permission 4755 on 'chrome-sandbox'...`);
+  fs.chmodSync(path.join(packagedAppPath, 'chrome-sandbox'), '4755');
 }
 
 function buildAsarUnpackGlobExpression() {
