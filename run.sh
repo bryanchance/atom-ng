@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd ./out/atom-ng-1.66.9-amd64/ &&
+cd ./out/Atom-ng_1.66.9_amd64/ &&
 ATOM_HOME="${PWD}/.atom" ./atom-ng $@

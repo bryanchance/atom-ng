@@ -19,6 +19,8 @@ module.exports = packagedAppPath => {
     exe: CONFIG.executableName,
     appDirectory: packagedAppPath,
     authors: 'Alex313031 & GitHub Inc.',
+    owners: 'Alex313031',
+    description: 'Atom-ng Installer',
     iconUrl: `https://raw.githubusercontent.com/Alex313031/atom-ng/master/resources/app-icons/${CONFIG.channel}/atom.ico`,
     loadingGif: path.join(
       CONFIG.repositoryRootPath,

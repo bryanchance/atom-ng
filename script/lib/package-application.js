@@ -65,6 +65,7 @@ module.exports = function() {
     win32metadata: {
       CompanyName: 'Alex313031',
       FileDescription: 'Atom-ng',
+      InternalName: CONFIG.internalName,
       ProductName: CONFIG.appName
     }
   }).then(packagedAppPath => {
@@ -299,7 +300,7 @@ function renamePackagedAppDir(packageOutputDirPath) {
     );
   } else if (process.platform === 'linux') {
     const appName =
-      CONFIG.channel !== 'stable' ? `atom-ng-${CONFIG.channel}` : 'atom-ng';
+      CONFIG.channel !== 'stable' ? `Atom-ng-${CONFIG.channel}` : 'Atom-ng';
     let architecture;
     if (HOST_ARCH === 'ia32') {
       architecture = 'i386';
@@ -310,14 +311,14 @@ function renamePackagedAppDir(packageOutputDirPath) {
     }
     packagedAppPath = path.join(
       CONFIG.buildOutputPath,
-      `${appName}-${CONFIG.appMetadata.version}-${architecture}`
+      `${appName}_${CONFIG.appMetadata.version}_${architecture}`
     );
     if (fs.existsSync(packagedAppPath)) fs.removeSync(packagedAppPath);
     fs.renameSync(packageOutputDirPath, packagedAppPath);
   } else {
     packagedAppPath = path.join(CONFIG.buildOutputPath, CONFIG.appName);
     if (process.platform === 'win32' && HOST_ARCH !== 'ia32') {
-      packagedAppPath += ` ${process.arch}`;
+      packagedAppPath += `_${CONFIG.appMetadata.version}_${process.arch}`;
     }
     if (fs.existsSync(packagedAppPath)) fs.removeSync(packagedAppPath);
     fs.renameSync(packageOutputDirPath, packagedAppPath);
