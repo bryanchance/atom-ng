@@ -19,9 +19,7 @@ module.exports = packagedAppPath => {
     exe: CONFIG.executableName,
     appDirectory: packagedAppPath,
     authors: 'Alex313031 & GitHub Inc.',
-    iconUrl: `https://raw.githubusercontent.com/Alex313031/atom-ng/master/resources/app-icons/${
-      CONFIG.channel
-    }/atom.ico`,
+    iconUrl: `https://raw.githubusercontent.com/Alex313031/atom-ng/master/resources/app-icons/${CONFIG.channel}/atom.ico`,
     loadingGif: path.join(
       CONFIG.repositoryRootPath,
       'resources',
@@ -30,7 +28,9 @@ module.exports = packagedAppPath => {
     ),
     outputDirectory: CONFIG.buildOutputPath,
     noMsi: true,
+    // Don't try to use RELEASES file or enable delta updates
     noDelta: true,
+    // Set setup executable name
     setupExe: `Atom-ng_${CONFIG.appMetadata.version}_Setup_${process.arch === 'x64' ? 'x64' : 'x32'}.exe`,
     setupIcon: path.join(
       CONFIG.repositoryRootPath,

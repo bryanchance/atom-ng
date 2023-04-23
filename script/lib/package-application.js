@@ -25,12 +25,13 @@ module.exports = function() {
   );
   return runPackager({
     appBundleId: 'com.alex313031.atom',
-    appCopyright: `Copyright © 2014-${new Date().getFullYear()} GitHub, Inc. & Alex313031 All rights reserved.`,
+    appCopyright: `Copyright © 2014-${new Date().getFullYear()} Alex313031 & GitHub Inc. All rights reserved.`,
     appVersion: CONFIG.appMetadata.version,
     arch: process.platform === 'darwin' ? 'x64' : HOST_ARCH, // OS X is 64-bit only
     asar: { unpack: buildAsarUnpackGlobExpression() },
     buildVersion: CONFIG.appMetadata.version,
     derefSymlinks: false,
+    // Use my optimized Electron builds!
     download: { quiet: false, disableChecksumSafetyCheck: true, unsafelyDisableChecksums: true, autoDownload: false, cacheRoot: CONFIG.electronDownloadPath, mirrorOptions: 
         { mirror: 'https://github.com/Alex313031/electron-12.2.3/releases/download/' }
     },
