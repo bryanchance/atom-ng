@@ -18,7 +18,7 @@ const fingerTxt = path.join(CONFIG.buildOutputPath, 'fingerprint.txt');
 
 module.exports = function() {
 
-  console.log(`Copying ${fingerPath} to ${fingerTxt}...`);
+  console.log(`Copying .dependencies-fingerprint to ${fingerTxt}...`);
   fs.copySync(fingerPath, fingerTxt);
 
   console.log(`Copying assets to ${CONFIG.intermediateAppPath}...`);
