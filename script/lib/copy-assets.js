@@ -1,7 +1,7 @@
+'use strict';
+
 // This module exports a function that copies all the static assets into the
 // appropriate location in the build output directory.
-
-'use strict';
 
 const path = require('path');
 const fs = require('fs-extra');
@@ -9,7 +9,18 @@ const CONFIG = require('../config');
 const glob = require('glob');
 const includePathInPackagedApp = require('./include-path-in-packaged-app');
 
+const fingerPath = path.join(
+  CONFIG.repositoryRootPath,
+  'node_modules',
+  '.dependencies-fingerprint'
+);
+const fingerTxt = path.join(CONFIG.buildOutputPath, 'fingerprint.txt');
+
 module.exports = function() {
+
+  console.log(`Copying ${fingerPath} to ${fingerTxt}...`);
+  fs.copySync(fingerPath, fingerTxt);
+
   console.log(`Copying assets to ${CONFIG.intermediateAppPath}...`);
   let srcPaths = [
     path.join(CONFIG.repositoryRootPath, 'benchmarks', 'benchmark-runner.js'),
