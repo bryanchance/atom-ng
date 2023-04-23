@@ -1,3 +1,7 @@
+@echo off
+
+title Bootstrapping Atom-ng
+
 echo Bootstrapping Atom-ng...
 
 set CFLAGS=-DNDEBUG /O2 /arch:AVX -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type

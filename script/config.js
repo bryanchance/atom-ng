@@ -30,7 +30,7 @@ const appName = getAppName(channel);
 const executableName = getExecutableName(channel, appName);
 const channelName = getChannelName(channel);
 const electronBinDir = path.join(repositoryRootPath, 'electron');
-const internalName = 'Atom-ng'
+const internalName = 'atom-ng'
 
 // Sets the installation jobs to run maximally in parallel if the user has
 // not already configured this. This is applied just by requiring this file.

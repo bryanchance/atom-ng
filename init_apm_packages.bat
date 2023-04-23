@@ -1,3 +1,7 @@
+@echo off
+
+title Bootstrapping dot-atom Packages
+
 echo Bootstrapping `dot-atom/packages` with `npm install`...
 
 set CFLAGS=-DNDEBUG -mavx -maes -O3 -g0 -s -Wno-deprecated-declarations -Wno-implicit-fallthrough -Wno-cast-function-type
