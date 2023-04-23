@@ -28,6 +28,7 @@
   'ctrl-shift-n': 'application:new-window'
   'ctrl-shift-w': 'window:close'
   'ctrl-o': 'application:open-file'
+  'ctrl-q': 'application:quit'
   'ctrl-shift-t': 'pane:reopen-closed-item'
   'ctrl-n': 'application:new-file'
   'ctrl-s': 'core:save'
