@@ -106,7 +106,7 @@ module.exports = class AboutView extends EtchComponent {
                 onclick: this.handleAtomVersionClick.bind(this)
               },
               $.span(
-                { className: 'about-version' },
+                { className: 'about-version', title: 'Atom-ng Version' },
                 `${this.props.currentAtomVersion} ${process.arch}`
               ),
               $.span({ className: 'icon icon-clippy about-copy-version' })

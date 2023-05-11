@@ -1,13 +1,13 @@
 {
   "name": "yiff-view",
-  "version": "0.1.3",
-  "description": "Show naughty yiff art.",
+  "version": "0.1.4",
+  "description": "Show naughty Yiff art.",
   "main": "./lib/main",
   "atomTestRunner": "atom-mocha-test-runner",
   "repository": "https://github.com/Alex313031/atom-ng",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">1.50.0"
   },
   "scripts": {
     "lint": "standard",

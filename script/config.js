@@ -30,6 +30,7 @@ const appName = getAppName(channel);
 const executableName = getExecutableName(channel, appName);
 const channelName = getChannelName(channel);
 const electronBinDir = path.join(repositoryRootPath, 'electron');
+const commitHash = computeCommitHash();
 const internalName = 'atom-ng'
 
 // Sets the installation jobs to run maximally in parallel if the user has
@@ -56,6 +57,7 @@ module.exports = {
   intermediateAppPath,
   symbolsPath,
   electronBinDir,
+  commitHash,
   internalName,
   electronDownloadPath,
   atomHomeDirPath,
@@ -107,6 +109,14 @@ function computeAppVersion(version) {
     version += '-' + commitHash;
   }
   return version;
+}
+
+function computeCommitHash() {
+  const result = spawnSync('git', ['rev-parse', '--short', 'HEAD'], {
+    cwd: repositoryRootPath
+  });
+  const commitHash = result.stdout.toString().trim();
+  return commitHash;
 }
 
 function getApmBinPath() {

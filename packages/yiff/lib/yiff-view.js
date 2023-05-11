@@ -67,11 +67,12 @@ export default class YiffView {
             </label>
           </section>
           </div>
-              <a name="1"><img class="yiff-image" onclick={this.didClickImage1} title="Kody's Ass Inspection" src="atom://yiff/assets/Kody_Inspection.png"></img></a>
-              <a name="2"><img class="yiff-image" onclick={this.didClickImage2} title="Roxy's Upskirt" src="atom://yiff/assets/Roxy_Upskirt.jpg"></img></a>
-              <a name="3"><img class="yiff-image" onclick={this.didClickImage3} title="Ass Shaking" src="atom://yiff/assets/Ass_Shaking.gif"></img></a>
-              <a name="4"><img class="yiff-image" onclick={this.didClickImage4} title="Bent Over Maid" src="atom://yiff/assets/Maid_Bend_Over.png"></img></a>
-              <a name="5"><img class="yiff-image" onclick={this.didClickImage5} title="Bunny Butt" src="atom://yiff/assets/Bunny_Butt.jpg"></img></a>
+              <a name="1"><img class="yiff-image" onclick={this.didClickImage1} title="Girls Just Wanna Have Fun" src="atom://yiff/assets/Girls_Just_Wanna_Have_Fun.png"></img></a>
+              <a name="2"><img class="yiff-image" onclick={this.didClickImage2} title="Kody's Ass Inspection" src="atom://yiff/assets/Kody_Inspection.png"></img></a>
+              <a name="3"><img class="yiff-image" onclick={this.didClickImage3} title="Roxy's Upskirt" src="atom://yiff/assets/Roxy_Upskirt.jpg"></img></a>
+              <a name="4"><img class="yiff-image" onclick={this.didClickImage4} title="Ass Shaking" src="atom://yiff/assets/Ass_Shaking.gif"></img></a>
+              <a name="5"><img class="yiff-image" onclick={this.didClickImage5} title="Bent Over Maid" src="atom://yiff/assets/Maid_Bend_Over.png"></img></a>
+              <a name="6"><img class="yiff-image" onclick={this.didClickImage6} title="Bunny Butt" src="atom://yiff/assets/Bunny_Butt.jpg"></img></a>
           </header>
         </div>
       </div>
@@ -96,21 +97,25 @@ export default class YiffView {
 
   didClickImage1(e) {
 	e.preventDefault();
-    atom.workspace.open(path.join(process.resourcesPath, 'app.asar', 'node_modules', 'yiff', 'assets', 'Kody_Inspection.png'));
+    atom.workspace.open(path.join(process.resourcesPath, 'app.asar', 'node_modules', 'yiff', 'assets', 'Girls_Just_Wanna_Have_Fun.png'));
   }
   didClickImage2(e) {
 	e.preventDefault();
-    atom.workspace.open(path.join(process.resourcesPath, 'app.asar', 'node_modules', 'yiff', 'assets', 'Roxy_Upskirt.jpg'));
+    atom.workspace.open(path.join(process.resourcesPath, 'app.asar', 'node_modules', 'yiff', 'assets', 'Kody_Inspection.png'));
   }
   didClickImage3(e) {
 	e.preventDefault();
-    atom.workspace.open(path.join(process.resourcesPath, 'app.asar', 'node_modules', 'yiff', 'assets', 'Ass_Shaking.gif'));
+    atom.workspace.open(path.join(process.resourcesPath, 'app.asar', 'node_modules', 'yiff', 'assets', 'Roxy_Upskirt.jpg'));
   }
   didClickImage4(e) {
 	e.preventDefault();
-    atom.workspace.open(path.join(process.resourcesPath, 'app.asar', 'node_modules', 'yiff', 'assets', 'Maid_Bend_Over.png'));
+    atom.workspace.open(path.join(process.resourcesPath, 'app.asar', 'node_modules', 'yiff', 'assets', 'Ass_Shaking.gif'));
   }
   didClickImage5(e) {
+	e.preventDefault();
+    atom.workspace.open(path.join(process.resourcesPath, 'app.asar', 'node_modules', 'yiff', 'assets', 'Maid_Bend_Over.png'));
+  }
+  didClickImage6(e) {
 	e.preventDefault();
     atom.workspace.open(path.join(process.resourcesPath, 'app.asar', 'node_modules', 'yiff', 'assets', 'Bunny_Butt.jpg'));
   }

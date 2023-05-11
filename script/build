@@ -69,6 +69,9 @@ const CONFIG = require('./config')
 // Used by the 'github' package for Babel configuration
 process.env.ELECTRON_VERSION = CONFIG.appMetadata.electronVersion
 
+// Export current commit hash for the About package
+process.env.ATOM_COMMIT_HASH = CONFIG.commitHash
+
 let binariesPromise = Promise.resolve()
 
 if (!argv.existingBinaries) {

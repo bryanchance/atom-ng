@@ -36,20 +36,27 @@ module.exports = function start(resourcePath, devResourcePath, startTime) {
     }
   });
 
+  // Enable sandbox opportunistically
+  // app.enableSandbox()
+
   // TodoElectronIssue this should be set to true before Electron 12 - https://github.com/electron/electron/issues/18397
   // WontFix: Atom-ng still needs this when using Electron 12.2.3
   app.allowRendererProcessReuse = false;
 
-  // Electron 12 crashes without disabling the sandbox
+  // Electron 12 devtools doesn't open without disabling the Chromium sandbox
   app.commandLine.appendSwitch('no-sandbox');
+  // Electron <13 crashes without disabling the GPU sandbox
+  // app.commandLine.appendSwitch('disable-gpu-sandbox');
+  // Runs GPU threads in the main process
+  // app.commandLine.appendSwitch('in-process-gpu');
   // Enable experimental web features
   app.commandLine.appendSwitch('enable-experimental-web-platform-features');
   // Including new Canvas2D APIs
   app.commandLine.appendSwitch('new-canvas-2d-api');
-  // These two allow easier local web development
-    // Allow file:// URIs to read other file:// URIs
+// The two following flags allow easier local web development
+  // Allow file:// URIs to read other file:// URIs
   app.commandLine.appendSwitch('allow-file-access-from-files');
-    // Enable local DOM to access all resources in a tree
+  // Enable local DOM to access all resources in a tree
   app.commandLine.appendSwitch('enable-local-file-accesses');
   // Enable QUIC for faster handshakes
   app.commandLine.appendSwitch('enable-quic');
@@ -62,9 +69,30 @@ module.exports = function start(resourcePath, devResourcePath, startTime) {
   // Enable OOP Rasterization for Canvas layers
   app.commandLine.appendSwitch('enable-features', 'CanvasOopRasterization');
   
-  if (process.platform == 'linux') {
+  if (process.platform === 'linux') {
     // Use VAAPI on Linux
     app.commandLine.appendSwitch('enable-features', 'VaapiVideoDecoder');
+  }
+
+  // See: https://www.electronjs.org/docs/latest/tutorial/testing-widevine-cdm
+  if (process.platform === 'linux') {
+    // You have to pass the directory that contains the widevine library here, it is
+    // * `libwidevinecdm.so` on Linux,
+    // * `libwidevinecdm.dylib` on macOS,
+    // * `widevinecdm.dll` on Windows.
+    app.commandLine.appendSwitch('widevine-cdm-path', 'WidevineCdm/4.10.2557.0/_platform_specific/linux_x64/')
+    // The version of plugin can be got from `chrome://components` page in Chromium.
+    app.commandLine.appendSwitch('widevine-cdm-version', '4.10.2557.0')
+  }
+  // See: https://www.electronjs.org/docs/latest/tutorial/testing-widevine-cdm#on-windows
+  if (process.platform === 'win32') {
+    // You have to pass the directory that contains the widevine library here, it is
+    // * `libwidevinecdm.so` on Linux,
+    // * `libwidevinecdm.dylib` on macOS,
+    // * `widevinecdm.dll` on Windows.
+    app.commandLine.appendSwitch('widevine-cdm-path', 'WidevineCdm/4.10.2557.0/_platform_specific/win_x64/')
+    // The version of plugin can be got from `chrome://components` page in Chromium.
+    app.commandLine.appendSwitch('widevine-cdm-version', '4.10.2557.0')
   }
 
   // Export command line arguments

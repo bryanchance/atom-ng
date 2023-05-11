@@ -105,6 +105,16 @@ function copyNonASARResources(packagedAppPath, bundledResourcesPath) {
     path.join(bundledResourcesPath, 'app', 'apm'),
     { filter: includePathInPackagedApp }
   );
+  // Enable Widevine
+  fs.copySync(
+    path.join(
+      CONFIG.repositoryRootPath,
+      'resources',
+      'WidevineCDM',
+      'WidevineCdm'
+    ),
+    path.join(packagedAppPath, 'WidevineCdm')
+  );
   if (process.platform !== 'win32') {
     // Existing symlinks on user systems point to an outdated path, so just symlink it to the real location of the apm binary.
     // TODO: Change command installer to point to appropriate path and remove this fallback after a few releases.

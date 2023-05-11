@@ -54,13 +54,20 @@ module.exports = class AtomWindow extends EventEmitter {
         // response to a middle-click.
         // (Ref: https://github.com/atom/atom/pull/12696#issuecomment-290496960)
         disableBlinkFeatures: 'Auxclick',
+        experimentalFeatures: true,
         nodeIntegration: true,
         worldSafeExecuteJavaScript: false,
         contextIsolation: false,
+        // sandbox: true,
+        devTools: true,
+        plugins: true,
+        // See https://github.com/electron/electron/issues/28511
+        nativeWindowOpen: true,
         webviewTag: true,
-
-        // TodoElectronIssue: remote module is deprecated https://www.electronjs.org/docs/breaking-changes#default-changed-enableremotemodule-defaults-to-false
+        // TodoElectronIssue: remote module is deprecated. See https://www.electronjs.org/docs/breaking-changes#default-changed-enableremotemodule-defaults-to-false
         enableRemoteModule: true,
+        // node support in sub-frames
+        nodeIntegrationInSubFrames: true,
         // node support in threads
         nodeIntegrationInWorker: true
       },
@@ -79,6 +86,8 @@ module.exports = class AtomWindow extends EventEmitter {
     const BrowserWindowConstructor =
       settings.browserWindowConstructor || BrowserWindow;
     this.browserWindow = new BrowserWindowConstructor(options);
+    // this.browserWindow.show()
+    // this.browserWindow.openDevTools()
 
     Object.defineProperty(this.browserWindow, 'loadSettingsJSON', {
       get: () =>
