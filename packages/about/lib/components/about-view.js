@@ -152,7 +152,7 @@ module.exports = class AboutView extends EtchComponent {
                 },
                 $.span(
                   { className: 'about-more-version' },
-                  `Chrome: ${this.props.currentChromeVersion} `
+                  `Chromium: ${this.props.currentChromeVersion} `
                 ),
                 $.span({ className: 'icon icon-clippy about-copy-version' })
               )
