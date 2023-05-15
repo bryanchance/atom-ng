@@ -173,7 +173,7 @@
     "temp": "0.9.4",
     "text-buffer": "git+https://github.com/Alex313031/text-buffer-ng.git#e723a5a",
     "timecop": "git+https://github.com/atom/timecop.git#59da87f",
-    "tree-sitter": "git+https://github.com/Alex313031/tree-sitter-ng.git#11448cc",
+    "tree-sitter": "git+https://github.com/Alex313031/tree-sitter-ng.git#6905c70",
     "tree-view": "git+https://github.com/Alex313031/tree-view-ng.git#8d9f8b2",
     "typescript-simple": "git+https://github.com/pulsar-edit/typescript-simple.git#ccb03e5",
     "underscore-plus": "^1.7.0",
