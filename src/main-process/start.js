@@ -43,6 +43,12 @@ module.exports = function start(resourcePath, devResourcePath, startTime) {
   // WontFix: Atom-ng still needs this when using Electron 12.2.3
   app.allowRendererProcessReuse = false;
 
+  if (process.env.NODE_ENV === 'development') {
+    process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = false;
+  } else {
+    process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = true;
+  }
+
   // Electron 12 devtools doesn't open without disabling the Chromium sandbox
   app.commandLine.appendSwitch('no-sandbox');
   // Electron <13 crashes without disabling the GPU sandbox
