@@ -28,6 +28,11 @@ module.exports = class AboutView extends EtchComponent {
     atom.clipboard.write(this.props.currentNodeVersion);
   }
 
+  handleV8VersionClick(e) {
+    e.preventDefault();
+    atom.clipboard.write(this.props.currentV8Version);
+  }
+
   handleReleaseNotesClick(e) {
     e.preventDefault();
     shell.openExternal(
@@ -140,7 +145,7 @@ module.exports = class AboutView extends EtchComponent {
                   { className: 'about-more-version' },
                   `Electron: ${this.props.currentElectronVersion} `
                 ),
-                $.span({ className: 'icon icon-clippy about-copy-version' })
+                $.span({ className: 'icon icon-clippy about-copy-version', title: 'Copy Electron Version' })
               )
             ),
             $.div(
@@ -154,7 +159,21 @@ module.exports = class AboutView extends EtchComponent {
                   { className: 'about-more-version' },
                   `Chromium: ${this.props.currentChromeVersion} `
                 ),
-                $.span({ className: 'icon icon-clippy about-copy-version' })
+                $.span({ className: 'icon icon-clippy about-copy-version', title: 'Copy Chromium Version' })
+              )
+            ),
+            $.div(
+              { className: 'about-more-info' },
+              $.span(
+                {
+                  className: 'about-version-container inline-block v8',
+                  onclick: this.handleV8VersionClick.bind(this)
+                },
+                $.span(
+                  { className: 'about-more-version' },
+                  `V8: ${this.props.currentV8Version} `
+                ),
+                $.span({ className: 'icon icon-clippy about-copy-version', title: 'Copy V8 Version' })
               )
             ),
             $.div(
@@ -168,7 +187,7 @@ module.exports = class AboutView extends EtchComponent {
                   { className: 'about-more-version' },
                   `Node: ${this.props.currentNodeVersion} `
                 ),
-                $.span({ className: 'icon icon-clippy about-copy-version' })
+                $.span({ className: 'icon icon-clippy about-copy-version', title: 'Copy NodeJS Version' })
               )
             )
           )

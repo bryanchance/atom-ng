@@ -1,5 +1,5 @@
 {
    "atom-workspace": {
-      "alt-y": "yiff:show"
+      "ctrl-alt-y": "yiff:show"
    }
 }
